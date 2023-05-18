@@ -1,0 +1,138 @@
+.Header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: black;
+  width: 100%;
+  height: 80px;
+  color: white;
+  /* 전체 */
+  fill: white;
+}
+
+.Header_flex {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 10%;
+  padding-left: 40px;
+}
+.Header_flex:hover {
+  fill: red;
+  cursor: pointer;
+}
+
+.Header_flex_button {
+  width: 10px;
+  padding-top: 10px;
+}
+
+.Header_logo {
+  box-sizing: border-box;
+  width: 70%;
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.Header_text {
+  display: flex;
+  color: white;
+  width: 70%;
+  margin-left: 20px;
+}
+
+.Header_text_area {
+  width: 100px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.Header_text_area::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: blue;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  opacity: 0;
+}
+
+.Header_text_area:hover p {
+  background: blue;
+  padding: 5px 8px;
+}
+
+.Header_text_area:hover::after {
+  opacity: 1;
+}
+
+.Header_right {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1;
+  width: 20%;
+  height: 80px;
+  padding-right: 30px;
+}
+
+.Header_right div form {
+  fill: #ffffff;
+}
+
+.Header_right .Header_right_div {
+  position: relative;
+  width: 20%;
+}
+
+.Header_right .Header_right_div .Search {
+  position: absolute;
+  background-color: aqua;
+  border-radius: 50%;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+}
+
+.Header_right .GlobeIcon {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Header_right .GlobeIcon a svg {
+  width: 20px;
+  height: 20px;
+}
+
+.Header_information {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 60%;
+}
+
+.Header_information div {
+  background: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.Login {
+  width: 50%;
+  margin-right: 10px;
+}
+
+.Register {
+  width: 50%;
+}
