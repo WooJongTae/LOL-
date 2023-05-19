@@ -7,7 +7,7 @@ function Header() {
     setLogo(!logo);
   }
   return logo ? (
-    <>
+    <div className="Header_container">
       <div className="Header_on">
         <div className="Header_on_flex">
           <div className="Header_on_flex_div" onClick={logoClick}>
@@ -35,104 +35,121 @@ function Header() {
         </div>
       </div>
       <div className="list">
-        <div className="Game_list">
-          <div>
-            <p>게임</p>
-            <ul>
-              <li>
-                <a href="#">리그 오브 레전드</a>
-              </li>
-              <li>
-                <a href="#">발로란트</a>
-              </li>
-              <li>
-                <a href="#">전략적 팀 전투</a>
-              </li>
-              <li>
-                <a href="#">레전드 오브 룬테라</a>
-              </li>
-              <li>
-                <a href="#">리그 오브 레전드:와이들 리프트</a>
-              </li>
-            </ul>
-          </div>
-          <div>
+        <div className="list_margin">
+          <div className="Game_list">
             <div>
-              <p>RIOT FORGE</p>
+              <p>게임</p>
               <ul>
                 <li>
-                  <a href="#">시간/교차</a>
+                  <a href="#">리그 오브 레전드</a>
                 </li>
                 <li>
-                  <a href="#">마법공학 아수라장</a>
+                  <a href="#">발로란트</a>
                 </li>
                 <li>
-                  <a href="#">마력 척결관</a>
+                  <a href="#">전략적 팀 전투</a>
                 </li>
                 <li>
-                  <a href="#">몰락한 왕</a>
+                  <a href="#">레전드 오브 룬테라</a>
                 </li>
                 <li>
-                  <a href="#">누누의 노래</a>
-                </li>
-                <li>
-                  <a href="#">RIOT FORGE의 게임</a>
+                  <a href="#">리그 오브 레전드:와이들 리프트</a>
                 </li>
               </ul>
             </div>
             <div>
-              <p>E스포츠</p>
-              <ul>
-                <li>
-                  <a href="#">리그 오브 레전드 e스포츠</a>
-                </li>
-                <li>
-                  <a href="#">발로란트 e스포츠</a>
-                </li>
-              </ul>
+              <div>
+                <p>RIOT FORGE</p>
+                <ul>
+                  <li>
+                    <a href="#">시간/교차</a>
+                  </li>
+                  <li>
+                    <a href="#">마법공학 아수라장</a>
+                  </li>
+                  <li>
+                    <a href="#">마력 척결관</a>
+                  </li>
+                  <li>
+                    <a href="#">몰락한 왕</a>
+                  </li>
+                  <li>
+                    <a href="#">누누의 노래</a>
+                  </li>
+                  <li>
+                    <a href="#">RIOT FORGE의 게임</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p>E스포츠</p>
+                <ul>
+                  <li>
+                    <a href="#">리그 오브 레전드 e스포츠</a>
+                  </li>
+                  <li>
+                    <a href="#">발로란트 e스포츠</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
 
-          <div>
             <div>
-              <p>엔터테인먼트</p>
-              <ul>
-                <li>
-                  <a href="#">아케인</a>
-                </li>
-                <li>
-                  <a href="#">유니버스</a>
-                </li>
-                <li>
-                  <a href="#">라이엇 게임즈 뮤직</a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p>기타</p>
-              <ul>
-                <li>
-                  <a href="#">라이엇 게임즈</a>
-                </li>
-                <li>
-                  <a href="#">라이엇 스토어</a>
-                </li>
-                <li>
-                  <a href="#">라이엇 모바일</a>
-                </li>
-                <li>
-                  <a href="#">라이엇 고객지원</a>
-                </li>
-              </ul>
+              <div>
+                <p>엔터테인먼트</p>
+                <ul>
+                  <li>
+                    <a href="#">아케인</a>
+                  </li>
+                  <li>
+                    <a href="#">유니버스</a>
+                  </li>
+                  <li>
+                    <a href="#">라이엇 게임즈 뮤직</a>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <p>기타</p>
+                <ul>
+                  <li>
+                    <a href="#">라이엇 게임즈</a>
+                  </li>
+                  <li>
+                    <a href="#">라이엇 스토어</a>
+                  </li>
+                  <li>
+                    <a href="#">라이엇 모바일</a>
+                  </li>
+                  <li>
+                    <a href="#">라이엇 고객지원</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
         <div className="Game_image">
-          <div>이미지1</div>
-          <div>이미지2</div>
+          <div>
+            <img
+              src="https://images.contentstack.io/v3/assets/blt0eb2a2986b796d29/blt127ae5655236be81/645553aeac434f394d6c918d/Conv_RiotBar-Promo-Card-Image-660x428.jpg??&format=pjpg&quality=85"
+              alt="이미지1"
+            />
+            <p>시간/교차: 리그 오브 레전드 이야기™</p>
+          </div>
+          <div>
+            <img
+              src="https://images.contentstack.io/v3/assets/blt0eb2a2986b796d29/blt7c7ad2e8705d9d21/6402a0e894e69a2df810fdf5/030723_Mageseeker_RiotBar_Promo_Card.jpg??&format=pjpg&quality=85"
+              alt="이미지2"
+            />
+            <p>
+              마법의 힘을 해방하세요. 액션 RPG에서 사일러스를 플레이해
+              데마시아를 폭정으로부터 구원하세요. 지금 플레이하세요!
+            </p>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   ) : (
     <div className="Header">
       <div className="Header_flex">
@@ -187,7 +204,21 @@ function Header() {
             <p>챔피언</p>
           </div>
           <div className="Header_text_area">
-            <p>새소식</p>
+            <p>
+              새소식
+              <svg
+                width="10"
+                height="5"
+                class="_16evwnRjE9JvfFbOuuC-EF _1lBECl9xmO0n7vnCvf6_dD"
+                viewBox="0 0 8 5"
+              >
+                <title>mainNavArrowDown</title>
+                <path
+                  d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z"
+                  fill="#7E7E7E"
+                ></path>
+              </svg>
+            </p>
           </div>
           <div className="Header_text_area">
             <p>패치노트</p>
@@ -199,13 +230,54 @@ function Header() {
             <p>다운로드</p>
           </div>
           <div className="Header_text_area">
-            <p>E스포츠</p>
+            <p>
+              E스포츠
+              <span class="_2XlrdzwlJjmQ0YwnWigGtH desktop-link-item-icon-linkout">
+                <svg width="7" height="7" class="" viewBox="0 0 16 16">
+                  <title>mainNavLinkOut</title>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12.916 4.158c0-.277-.116-.55-.32-.753a1.073 1.073 0 00-.752-.32H3.428l.144 2h5.93l-6.803 6.803 1.414 1.414L10.916 6.5v5.928l2 .144V4.158z"
+                    fill="#737373"
+                  ></path>
+                </svg>
+              </span>
+            </p>
           </div>
           <div className="Header_text_area">
-            <p>유니버스</p>
+            <p>
+              알아보기
+              <svg
+                width="10"
+                height="5"
+                class="_16evwnRjE9JvfFbOuuC-EF _1lBECl9xmO0n7vnCvf6_dD"
+                viewBox="0 0 8 5"
+              >
+                <title>mainNavArrowDown</title>
+                <path
+                  d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z"
+                  fill="#7E7E7E"
+                ></path>
+              </svg>
+            </p>
           </div>
           <div className="Header_text_area">
-            <p>더보기</p>
+            <p>
+              더보기
+              <svg
+                width="10"
+                height="5"
+                class="_16evwnRjE9JvfFbOuuC-EF _1lBECl9xmO0n7vnCvf6_dD"
+                viewBox="0 0 8 5"
+              >
+                <title>mainNavArrowDown</title>
+                <path
+                  d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z"
+                  fill="#7E7E7E"
+                ></path>
+              </svg>
+            </p>
           </div>
         </div>
       </div>
