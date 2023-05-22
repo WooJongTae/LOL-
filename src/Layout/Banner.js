@@ -22,8 +22,10 @@ function Banner() {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
+        <div className="Banner_position_line"></div>
         <div className="play">
           <span>무료로 플레이하기</span>
+          <div className="play_line"></div>
         </div>
       </div>
     </div>
