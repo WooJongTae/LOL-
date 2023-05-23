@@ -1,0 +1,78 @@
+.Information_container {
+  width: 100%;
+  height: 700px;
+  background-image: url(../../public/images//bg.png);
+
+  position: relative;
+}
+
+.Information_container .text_header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.Information .position {
+  position: relative;
+}
+.Information_container span {
+  position: absolute;
+  left: 1%;
+  top: 8%;
+  -webkit-transform: rotate(-90deg);
+}
+
+.Information_container span::after {
+  position: relative;
+  top: -4px;
+  left: 5px;
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  margin-left: 1px;
+  background: black;
+}
+
+.Information_container .Information_img {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+  height: 50%;
+}
+
+.Information_container .Information_img div {
+  position: relative;
+  margin: 0 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Information_container .Information_img div::after {
+  position: absolute;
+  content: "";
+  border: 1px solid red;
+  top: -5%;
+  border-radius: 0 40px 0 0;
+  width: 100%;
+  height: 110%;
+  transition: all 0.5s ease;
+}
+
+.Information_container .Information_img div:hover::after {
+  border-radius: 0;
+}
+
+.Information_container .Information_img div img {
+  width: 90%;
+  height: 70%;
+}
+
+.Information_container .Information_img div p {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 20px;
+  font-weight: 800;
+}

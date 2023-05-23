@@ -1,0 +1,52 @@
+.Container {
+  width: 100%;
+  height: 80px;
+  background: green;
+}
+
+.Container .Container_width {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Container .Container_width h1 {
+  height: 100%;
+  width: 20%;
+  color: white;
+  font-size: 20px;
+  line-height: 80px;
+}
+
+.Container .Container_width .explain {
+  width: 60%;
+  height: 100%;
+  font-size: 6px;
+  text-align: center;
+  line-height: 80px;
+}
+
+.Container .Container_width .imgs {
+  width: 20%;
+  height: 80px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.Container .Container_width .imgs a .imgs1 {
+  width: 80px;
+  height: 100%;
+  line-height: 80px;
+}
+.Container .Container_width .imgs a .imgs2 {
+  width: 120px;
+  height: 100%;
+  line-height: 80px;
+  position: absolute;
+  left: 110px;
+  top: 3%;
+}
