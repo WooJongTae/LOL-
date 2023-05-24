@@ -13,6 +13,11 @@ function Banner() {
         allowfullscreen
       ></iframe>
       <div className="Banner_position">
+        <img
+          className="Logo"
+          src="/images/logo-1200-589b3ef693ce8a750fa4b4704f1e61f2.png"
+          alt="logo"
+        />
         <iframe
           className="Banner_image2"
           src="https://www.youtube.com/embed/6k8bHfBKDT4"

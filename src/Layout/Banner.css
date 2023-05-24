@@ -18,6 +18,15 @@
   position: absolute;
 }
 
+.Banner_position .Logo {
+  width: 45%;
+  z-index: 9999;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .Banner .Banner_position .Banner_image2 {
   width: 100%;
   height: 100%;

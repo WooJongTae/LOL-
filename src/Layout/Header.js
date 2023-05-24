@@ -219,6 +219,10 @@ function Header() {
                 ></path>
               </svg>
             </p>
+            <ul>
+              <li></li>
+            </ul>
+            {/* hover때보이게 */}
           </div>
           <div className="Header_text_area">
             <p>패치노트</p>
