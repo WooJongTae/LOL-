@@ -2,6 +2,7 @@ import React from "react";
 import "./Advertisement.css";
 
 function Advertisement() {
+  console.log(window.screenY);
   return (
     // 왜 css가 Container 일때 중첩되어 실행되는지
     <div className="Container2">

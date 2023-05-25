@@ -1,0 +1,89 @@
+.Round {
+  width: 100%;
+  height: 100vh;
+
+  position: relative;
+}
+
+.Round .Round_flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Round .Round_video {
+  border-radius: 50%;
+  width: 500px;
+  height: 500px;
+}
+
+.Round .Round_flex .Round_sub_flex {
+  position: absolute;
+  display: flex;
+  margin-top: 40px;
+  top: 500px;
+  left: 59%;
+  /* 9기준으로하면 */
+  transform: translateX(-50%);
+}
+
+/* .Round .Round_flex .Round_sub_flex 123해서 각각 위치옮기기 */
+
+.Round .Round_flex .Round_sub_flex img {
+  margin: 0 20px;
+  width: 100px;
+  height: 100px;
+}
+/* 
+.Round .Round_flex .Round_sub_flex.On img {
+  transform: scale(0.5);
+} */
+
+.Round .Round_flex .Round_sub_flex .Round_img_1.On img {
+  transform: scale(1.5);
+}
+
+.field {
+  position: absolute;
+  top: 650px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 30px 40px;
+  background: blue;
+  display: none;
+}
+
+.field.On {
+  display: block;
+}
+
+.Round_text {
+  text-align: center;
+  position: absolute;
+  top: 800px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.Round_text.On {
+  display: block;
+}
+
+.Game_mode {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: rotate(-90deg);
+}
+
+.Game_mode::after {
+  content: "";
+  width: 20px;
+  height: 1px;
+  background: black;
+  position: absolute;
+  right: -30px;
+  top: 50%;
+}

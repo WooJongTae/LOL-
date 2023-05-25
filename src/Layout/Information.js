@@ -1,6 +1,7 @@
 import React from "react";
 import "./Information.css";
 function Information() {
+  // 여기에 스크롤추가해서 효과주기
   return (
     <div className="Information_container">
       <div className="position">

@@ -2,10 +2,24 @@ import React, { useState } from "react";
 import "./Header.css";
 function Header() {
   const [logo, setLogo] = useState(false);
+  const [onSearch, setOnSearch] = useState(false);
 
   function logoClick() {
     setLogo(!logo);
   }
+
+  function SearchTrue() {
+    console.log(onSearch);
+    setOnSearch(true);
+  }
+
+  function SearchFalse(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    console.log(onSearch);
+    setOnSearch(false);
+  }
+  // 돋보기 앱솔하고 라이트0하기
   return logo ? (
     <div className="Header_container">
       <div className="Header_on">
@@ -198,14 +212,64 @@ function Header() {
         </svg>
         <div className="Header_text">
           <div className="Header_text_area">
-            <p>게임정보</p>
-          </div>
-          <div className="Header_text_area">
-            <p>챔피언</p>
+            <p>
+              게임정보
+              <svg
+                width="10"
+                height="5"
+                class="_16evwnRjE9JvfFbOuuC-EF _1lBECl9xmO0n7vnCvf6_dD"
+                viewBox="0 0 8 5"
+              >
+                <title>mainNavArrowDown</title>
+                <path
+                  d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z"
+                  fill="#7E7E7E"
+                ></path>
+              </svg>
+            </p>
+            <div className="Header_div">
+              <ul>
+                <li>기본정보</li>
+                <li>챔피언</li>
+                <li>패치 노트</li>
+              </ul>
+            </div>
           </div>
           <div className="Header_text_area">
             <p>
               새소식
+              <svg
+                width="10"
+                height="5"
+                class="_16evwnRjE9JvfFbOuuC-EF _1lBECl9xmO0n7vnCvf6_dD"
+                viewBox="0 0 8 5"
+              >
+                <title>mainNavArrowDown</title>
+                <path
+                  d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z"
+                  fill="#7E7E7E"
+                ></path>
+              </svg>
+            </p>
+            <div className="Header_div">
+              <ul>
+                <li>전체</li>
+                <li>게임 업데이트</li>
+                <li>공지</li>
+                <li>개발자 블로그</li>
+                <li>세계관</li>
+                <li>미디어</li>
+                <li>라이엇 스토어</li>
+                <li>E스포츠</li>
+                <li>라이엇 게임즈</li>
+                <li>커뮤니티</li>
+                <li>티모 문화유산 원정대</li>
+              </ul>
+            </div>
+          </div>
+          <div className="Header_text_area">
+            <p>
+              다운로드
               <svg
                 width="10"
                 height="5"
@@ -225,15 +289,6 @@ function Header() {
             {/* hover때보이게 */}
           </div>
           <div className="Header_text_area">
-            <p>패치노트</p>
-          </div>
-          <div className="Header_text_area">
-            <p>다운 로드</p>
-          </div>
-          <div className="Header_text_area">
-            <p>다운로드</p>
-          </div>
-          <div className="Header_text_area">
             <p>
               E스포츠
               <span class="_2XlrdzwlJjmQ0YwnWigGtH desktop-link-item-icon-linkout">
@@ -251,6 +306,51 @@ function Header() {
           </div>
           <div className="Header_text_area">
             <p>
+              이벤트
+              <svg
+                width="10"
+                height="5"
+                class="_16evwnRjE9JvfFbOuuC-EF _1lBECl9xmO0n7vnCvf6_dD"
+                viewBox="0 0 8 5"
+              >
+                <title>mainNavArrowDown</title>
+                <path
+                  d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z"
+                  fill="#7E7E7E"
+                ></path>
+              </svg>
+              <div className="Header_div">
+                <ul>
+                  <li>
+                    2022 DRX 스킨 출시 기념 이벤트
+                    <svg width="7" height="7" class="" viewBox="0 0 16 16">
+                      <title>mainNavLinkOut</title>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.916 4.158c0-.277-.116-.55-.32-.753a1.073 1.073 0 00-.752-.32H3.428l.144 2h5.93l-6.803 6.803 1.414 1.414L10.916 6.5v5.928l2 .144V4.158z"
+                        fill="#737373"
+                      ></path>
+                    </svg>
+                  </li>
+                  <li>
+                    5월에는 PC방에서 더 꿀잼!
+                    <svg width="7" height="7" class="" viewBox="0 0 16 16">
+                      <title>mainNavLinkOut</title>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.916 4.158c0-.277-.116-.55-.32-.753a1.073 1.073 0 00-.752-.32H3.428l.144 2h5.93l-6.803 6.803 1.414 1.414L10.916 6.5v5.928l2 .144V4.158z"
+                        fill="#737373"
+                      ></path>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </p>
+          </div>
+          <div className="Header_text_area">
+            <p>
               알아보기
               <svg
                 width="10"
@@ -264,31 +364,92 @@ function Header() {
                   fill="#7E7E7E"
                 ></path>
               </svg>
+              <div className="Header_div">
+                <ul>
+                  <li>LOL 디스플레이</li>
+                  <li>모바일 상점</li>
+                  <li>라이엇 모바일</li>
+                  <li>아바타 생성기</li>
+                </ul>
+              </div>
+            </p>
+          </div>
+          <div className="Header_text_area">
+            <p>
+              유니버스
+              <span class="_2XlrdzwlJjmQ0YwnWigGtH desktop-link-item-icon-linkout">
+                <svg width="7" height="7" class="" viewBox="0 0 16 16">
+                  <title>mainNavLinkOut</title>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12.916 4.158c0-.277-.116-.55-.32-.753a1.073 1.073 0 00-.752-.32H3.428l.144 2h5.93l-6.803 6.803 1.414 1.414L10.916 6.5v5.928l2 .144V4.158z"
+                    fill="#737373"
+                  ></path>
+                </svg>
+              </span>
+            </p>
+          </div>
+          <div className="Header_text_area">
+            <p>
+              고객지원
+              <span class="_2XlrdzwlJjmQ0YwnWigGtH desktop-link-item-icon-linkout">
+                <svg width="7" height="7" class="" viewBox="0 0 16 16">
+                  <title>mainNavLinkOut</title>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12.916 4.158c0-.277-.116-.55-.32-.753a1.073 1.073 0 00-.752-.32H3.428l.144 2h5.93l-6.803 6.803 1.414 1.414L10.916 6.5v5.928l2 .144V4.158z"
+                    fill="#737373"
+                  ></path>
+                </svg>
+              </span>
             </p>
           </div>
           <div className="Header_text_area">
             <p>
               더보기
-              <svg
-                width="10"
-                height="5"
-                class="_16evwnRjE9JvfFbOuuC-EF _1lBECl9xmO0n7vnCvf6_dD"
-                viewBox="0 0 8 5"
-              >
-                <title>mainNavArrowDown</title>
-                <path
-                  d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z"
-                  fill="#7E7E7E"
-                ></path>
-              </svg>
+              <span class="_2XlrdzwlJjmQ0YwnWigGtH desktop-link-item-icon-linkout">
+                <svg width="7" height="7" class="" viewBox="0 0 16 16">
+                  <title>mainNavLinkOut</title>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M12.916 4.158c0-.277-.116-.55-.32-.753a1.073 1.073 0 00-.752-.32H3.428l.144 2h5.93l-6.803 6.803 1.414 1.414L10.916 6.5v5.928l2 .144V4.158z"
+                    fill="#737373"
+                  ></path>
+                </svg>
+              </span>
+              <div className="Header_div">
+                <ul>
+                  <li>라이엇 스토어</li>
+                </ul>
+              </div>
             </p>
           </div>
         </div>
       </div>
       <div className="Header_right">
-        <div className="Header_right_div">
+        <div className="Header_right_div" onClick={SearchTrue}>
           <form action="POST">
-            <svg viewBox="0 0 19 20" className="Search">
+            <input className={onSearch ? "inputOn" : ""} />
+            {onSearch ? (
+              <button
+                type="button"
+                className="Cancel"
+                onClick={(e) => {
+                  SearchFalse(e);
+                }}
+              >
+                X
+              </button>
+            ) : (
+              ""
+            )}
+            <svg
+              viewBox="0 0 19 20"
+              className={onSearch ? "Search inputOn" : "Search"}
+            >
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"

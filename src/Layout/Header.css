@@ -3,6 +3,7 @@
   text-decoration: none;
   margin: 0;
   padding: 0;
+  font-size: 12px;
 }
 
 .Header {
@@ -64,13 +65,49 @@
 .Header_text_area::after {
   content: "";
   display: block;
-  width: 100%;
+  width: 200px;
   height: 5px;
   background: blue;
   position: absolute;
   bottom: 10px;
-  left: 0;
+  left: 10px;
   opacity: 0;
+}
+
+.Header_text_area:nth-of-type(1):after {
+  /* left: 12px; */
+}
+
+.Header_text_area:nth-of-type(2):after {
+  left: 18px;
+}
+
+.Header_text_area:nth-of-type(3):after {
+  left: 12px;
+}
+
+.Header_text_area:nth-of-type(4):after {
+  left: 18px;
+}
+
+.Header_text_area:nth-of-type(5):after {
+  left: 18px;
+}
+
+.Header_text_area:nth-of-type(6):after {
+  left: 12px;
+}
+
+.Header_text_area:nth-of-type(7):after {
+  left: 16px;
+}
+
+.Header_text_area:nth-of-type(8):after {
+  left: 15px;
+}
+
+.Header_text_area:nth-of-type(9):after {
+  left: 20px;
 }
 
 .Header_text_area:hover p {
@@ -283,4 +320,101 @@
 .Game_image div img {
   width: 100%;
   margin-bottom: 5px;
+}
+
+.Search {
+  width: 400px;
+}
+
+input {
+  position: absolute;
+  top: 20px;
+  right: 3px;
+  width: 20px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+input.inputOn {
+  width: 300px;
+  border-radius: 17px;
+  padding-left: 40px;
+}
+
+.Header_right .Header_right_div .Search.inputOn {
+  position: absolute;
+  left: -300px;
+  top: 40px;
+}
+
+.Cancel {
+  position: absolute;
+  top: 25px;
+  left: -5px;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.Header_text .Header_text_area .Header_div {
+  display: flex;
+  width: 200px;
+  height: auto;
+  flex-direction: column;
+  position: absolute;
+  top: 88%;
+  left: 12.5px;
+  background: pink;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.Header_text .Header_text_area:nth-of-type(2) .Header_div {
+  display: flex;
+  width: 200px;
+  height: auto;
+  flex-direction: column;
+  position: absolute;
+  top: 88%;
+  left: 19px;
+  background: pink;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.Header_text .Header_text_area:nth-of-type(5) .Header_div {
+  display: flex;
+  width: 200px;
+  height: auto;
+  flex-direction: column;
+  position: absolute;
+  top: 88%;
+  left: 19px;
+  background: pink;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.Header_text .Header_text_area:nth-of-type(9) .Header_div {
+  display: flex;
+  width: 200px;
+  height: auto;
+  flex-direction: column;
+  position: absolute;
+  top: 88%;
+  left: 20px;
+  background: pink;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.Header_text .Header_text_area .Header_div li {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 50px 5px 10px;
+  margin: 10px 0;
+  background: red;
+}
+
+.Header_text .Header_text_area .Header_div li:hover {
+  background: gray;
 }

@@ -10,6 +10,8 @@ import Information from "./Information";
 import Social from "./Social";
 import Field from "./Field";
 import Champion from "./Champion";
+import Champion2 from "./Champion2";
+import Round from "./Round";
 function Layout() {
   return (
     <div className="div_flex">
@@ -18,6 +20,8 @@ function Layout() {
       <Main1 />
       <Social />
       <Champion />
+      <Champion2 />
+      <Round />
       <Field />
       <Information />
       <Advertisement />

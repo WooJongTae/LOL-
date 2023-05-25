@@ -2,6 +2,44 @@ import React from "react";
 import "./Champion.css";
 function Champion() {
   return (
+    //     import React, { useState } from 'react';
+
+    // const MyFunctionalComponent = () => {
+    //   const [activeDiv, setActiveDiv] = useState(null);
+
+    //   const handleDivClick = (divIndex) => {
+    //     setActiveDiv(divIndex);
+    //   };
+
+    //   const defaultClass = 'my-class';
+
+    //   return (
+    //     <div>
+    //       <div
+    //         className={activeDiv === 1 ? `${defaultClass} nodia` : ''}
+    //         onClick={() => handleDivClick(1)}
+    //       >
+    //         {/* 첫 번째 div */}
+    //       </div>
+    //       <div
+    //         className={activeDiv === 2 ? `${defaultClass} nodia` : ''}
+    //         onClick={() => handleDivClick(2)}
+    //       >
+    //         {/* 두 번째 div */}
+    //       </div>
+    //       <div
+    //         className={activeDiv === 3 ? `${defaultClass} nodia` : ''}
+    //         onClick={() => handleDivClick(3)}
+    //       >
+    //         {/* 세 번째 div */}
+    //       </div>
+    //       {/* 추가적인 div들 */}
+    //     </div>
+    //   );
+    // }
+
+    // export default MyFunctionalComponent;
+    // onclick으로 1,2,3,4,5 이렇게 값을 넘겨줘서??
     <div className="Champion">
       <div className="Champion_container">
         <div className="Champion_text">
@@ -91,6 +129,7 @@ function Champion() {
           />
         </div>
         <div className="img_screen_name">
+          {/* 여기 하드코딩 const로 배열만들어서넣기 이미지도 */}
           아칼리
           <br />
           섬기는 이 없는 암살자
