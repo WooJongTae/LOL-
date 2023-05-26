@@ -3,6 +3,15 @@ import "./Header.css";
 function Header() {
   const [logo, setLogo] = useState(false);
   const [onSearch, setOnSearch] = useState(false);
+  const [isHovered, setIsHovered] = useState(0);
+
+  const handleMouseEnter = (num) => {
+    setIsHovered(num);
+  };
+
+  const handleMouseLeave = (num) => {
+    setIsHovered(num);
+  };
 
   function logoClick() {
     setLogo(!logo);
@@ -211,7 +220,11 @@ function Header() {
           </g>
         </svg>
         <div className="Header_text">
-          <div className="Header_text_area">
+          <div
+            className="Header_text_area"
+            onMouseEnter={() => handleMouseEnter(1)}
+            onMouseLeave={() => handleMouseLeave(0)}
+          >
             <p>
               게임정보
               <svg
@@ -227,7 +240,10 @@ function Header() {
                 ></path>
               </svg>
             </p>
-            <div className="Header_div">
+            <div
+              className="Header_div"
+              style={{ display: 1 == isHovered ? "block" : "none" }}
+            >
               <ul>
                 <li>기본정보</li>
                 <li>챔피언</li>
@@ -235,7 +251,11 @@ function Header() {
               </ul>
             </div>
           </div>
-          <div className="Header_text_area">
+          <div
+            className="Header_text_area"
+            onMouseEnter={() => handleMouseEnter(2)}
+            onMouseLeave={() => handleMouseLeave(0)}
+          >
             <p>
               새소식
               <svg
@@ -251,7 +271,10 @@ function Header() {
                 ></path>
               </svg>
             </p>
-            <div className="Header_div">
+            <div
+              className="Header_div"
+              style={{ display: 2 == isHovered ? "block" : "none" }}
+            >
               <ul>
                 <li>전체</li>
                 <li>게임 업데이트</li>
@@ -268,21 +291,7 @@ function Header() {
             </div>
           </div>
           <div className="Header_text_area">
-            <p>
-              다운로드
-              <svg
-                width="10"
-                height="5"
-                class="_16evwnRjE9JvfFbOuuC-EF _1lBECl9xmO0n7vnCvf6_dD"
-                viewBox="0 0 8 5"
-              >
-                <title>mainNavArrowDown</title>
-                <path
-                  d="M.707 1.707l2.586 2.586a1 1 0 001.414 0l2.586-2.586C7.923 1.077 7.477 0 6.586 0H1.414C.524 0 .077 1.077.707 1.707z"
-                  fill="#7E7E7E"
-                ></path>
-              </svg>
-            </p>
+            <p>다운로드</p>
             <ul>
               <li></li>
             </ul>
@@ -304,7 +313,11 @@ function Header() {
               </span>
             </p>
           </div>
-          <div className="Header_text_area">
+          <div
+            className="Header_text_area"
+            onMouseEnter={() => handleMouseEnter(5)}
+            onMouseLeave={() => handleMouseLeave(0)}
+          >
             <p>
               이벤트
               <svg
@@ -319,7 +332,10 @@ function Header() {
                   fill="#7E7E7E"
                 ></path>
               </svg>
-              <div className="Header_div">
+              <div
+                className="Header_div"
+                style={{ display: 5 == isHovered ? "block" : "none" }}
+              >
                 <ul>
                   <li>
                     2022 DRX 스킨 출시 기념 이벤트
@@ -349,7 +365,11 @@ function Header() {
               </div>
             </p>
           </div>
-          <div className="Header_text_area">
+          <div
+            className="Header_text_area"
+            onMouseEnter={() => handleMouseEnter(6)}
+            onMouseLeave={() => handleMouseLeave(0)}
+          >
             <p>
               알아보기
               <svg
@@ -364,7 +384,10 @@ function Header() {
                   fill="#7E7E7E"
                 ></path>
               </svg>
-              <div className="Header_div">
+              <div
+                className="Header_div"
+                style={{ display: 6 == isHovered ? "block" : "none" }}
+              >
                 <ul>
                   <li>LOL 디스플레이</li>
                   <li>모바일 상점</li>
@@ -392,7 +415,7 @@ function Header() {
           </div>
           <div className="Header_text_area">
             <p>
-              고객지원
+              라이엇 스토어
               <span class="_2XlrdzwlJjmQ0YwnWigGtH desktop-link-item-icon-linkout">
                 <svg width="7" height="7" class="" viewBox="0 0 16 16">
                   <title>mainNavLinkOut</title>
@@ -406,7 +429,11 @@ function Header() {
               </span>
             </p>
           </div>
-          <div className="Header_text_area">
+          <div
+            className="Header_text_area"
+            onMouseEnter={() => handleMouseEnter(9)}
+            onMouseLeave={() => handleMouseLeave(0)}
+          >
             <p>
               더보기
               <span class="_2XlrdzwlJjmQ0YwnWigGtH desktop-link-item-icon-linkout">
@@ -420,7 +447,10 @@ function Header() {
                   ></path>
                 </svg>
               </span>
-              <div className="Header_div">
+              <div
+                className="Header_div"
+                style={{ display: 9 == isHovered ? "block" : "none" }}
+              >
                 <ul>
                   <li>라이엇 스토어</li>
                 </ul>

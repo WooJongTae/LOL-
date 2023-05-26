@@ -75,7 +75,7 @@
 }
 
 .Header_text_area:nth-of-type(1):after {
-  /* left: 12px; */
+  left: 12px;
 }
 
 .Header_text_area:nth-of-type(2):after {
@@ -189,7 +189,21 @@
   top: 0;
   left: 0;
   z-index: 9999;
+  /* animation: dropdown 1s ease-in-out 1;
+  transition: all 0.5s ease; */
 }
+
+/* @keyframes dropdown {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 100px; 
+  }
+  100% {
+    top: 0;
+  }
+} */
 
 .Header_on {
   width: 100%;
