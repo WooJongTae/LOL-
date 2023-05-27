@@ -12,7 +12,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  background: black;
+  background: rgb(17, 17, 17);
   width: 100%;
   height: 80px;
   color: white;
@@ -40,20 +40,20 @@
 .Header_logo {
   box-sizing: border-box;
   width: 70%;
-  margin-left: 40px;
+  margin-left: -10px;
   display: flex;
   align-items: center;
 }
 
 .Header_text {
   display: flex;
-  color: white;
-  width: 70%;
+  color: rgb(249, 249, 249);
+  width: 80%;
   margin-left: 20px;
 }
 
 .Header_text_area {
-  width: 100px;
+  width: 120px;
   height: 80px;
   display: flex;
   align-items: center;
@@ -61,19 +61,28 @@
   cursor: pointer;
   position: relative;
 }
+.Header_text_area p {
+  position: relative;
+  fill: gray;
+}
 
-.Header_text_area::after {
+.Header_text_area p::after {
   content: "";
   display: block;
   width: 200px;
   height: 5px;
-  background: blue;
+  background: rgb(0, 160, 186);
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  z-index: 99999;
+  bottom: -14px;
+  left: 0;
   opacity: 0;
 }
 
+.Header_text_area svg {
+  margin-left: 5px;
+}
+/* 
 .Header_text_area:nth-of-type(1):after {
   left: 12px;
 }
@@ -105,18 +114,24 @@
 .Header_text_area:nth-of-type(8):after {
   left: 15px;
 }
-
+*/
 .Header_text_area:nth-of-type(9):after {
   left: 20px;
 }
 
 .Header_text_area:hover p {
-  background: blue;
-  padding: 5px 8px;
+  background: rgb(51, 51, 51);
+  padding: 7px 10px;
+  border-radius: 7px;
+  opacity: 1;
+  fill: white;
 }
 
-.Header_text_area:hover::after {
+.Header_text_area:hover p::after {
   opacity: 1;
+}
+.Header_text_area:hover p::after svg {
+  fill: white;
 }
 
 .Header_right {
@@ -132,6 +147,9 @@
   fill: #ffffff;
 }
 
+.Header_right div .inputOn {
+  background: rgb(43, 42, 41);
+}
 .Header_right .Header_right_div {
   position: relative;
   width: 10%;
@@ -139,7 +157,7 @@
 
 .Header_right .Header_right_div .Search {
   position: absolute;
-  background-color: aqua;
+  background-color: rgb(43, 42, 41);
   border-radius: 50%;
   padding: 10px;
   top: 50%;
@@ -155,6 +173,13 @@
   justify-content: center;
 }
 
+.Header_right .GlobeIcon:hover a {
+  display: block;
+  padding: 5px;
+  background: rgb(43, 42, 41);
+  border-radius: 4px;
+}
+
 .Header_right .GlobeIcon a svg {
   width: 20px;
   height: 20px;
@@ -168,9 +193,20 @@
 }
 
 .Header_information div {
-  background: red;
-  padding: 5px 10px;
+  display: inline-block;
+}
+
+.Header_information div:nth-of-type(1) {
+  background: rgb(40, 40, 40);
+  padding: 7px 0px;
   border-radius: 5px;
+}
+
+.Header_information div:nth-of-type(2) {
+  background: rgb(19, 182, 218);
+  padding: 7px 2px;
+  color: black;
+  border-radius: 10px;
 }
 
 .Login {
@@ -208,7 +244,7 @@
 .Header_on {
   width: 100%;
   height: 80px;
-  background: orange;
+  background: rgb(249, 249, 249);
 }
 
 .Header_on .Header_on_flex {
@@ -240,8 +276,9 @@
   justify-content: center;
   align-items: flex-start;
   margin-right: 40px;
-  background: gray;
-  padding: 7px;
+  background: rgb(236, 236, 236);
+  padding: 7px 9px;
+  border-radius: 8px;
 }
 
 .list {
@@ -250,14 +287,14 @@
   display: flex;
   padding: 0 24px;
   box-sizing: border-box;
-  background: black;
+  background: rgb(249, 249, 249);
 }
 
 .list .Game_list {
   display: flex;
   width: 100%;
   height: 100%;
-  background: red;
+  background: rgb(249, 249, 249);
 }
 
 .list div {
@@ -295,27 +332,36 @@
 }
 
 .list .Game_list p {
-  background: green;
+  background: rgb(243, 243, 243);
+  color: black;
+  font-weight: bold;
   width: 100%;
   padding: 8px 12px 16px;
   box-sizing: border-box;
+  border-radius: 5px;
 }
 
 .list .Game_image {
   display: flex;
   width: 100%;
   height: 100%;
-  background: blue;
+  background: rgb(249, 249, 249);
 }
 
 .list .Game_list ul li {
   margin-top: 4px;
-  padding: 4px 12px 16px;
+  padding: 8px 12px 8px;
   font-size: 15px;
+  border-radius: 5px;
+}
+
+.list .Game_list ul li a {
+  color: black;
 }
 
 .list .Game_list ul li:hover {
-  background: yellow;
+  cursor: pointer;
+  background: rgb(230, 230, 230);
 }
 
 .Game_image {
@@ -329,6 +375,7 @@
 .Game_image div {
   box-sizing: border-box;
   width: 48%;
+  cursor: pointer;
 }
 
 .Game_image div img {
@@ -355,18 +402,25 @@ input.inputOn {
   padding-left: 40px;
 }
 
+input.inputOn:focus {
+  outline-color: transparent;
+  /* 왜안되지? */
+}
+
 .Header_right .Header_right_div .Search.inputOn {
   position: absolute;
-  left: -300px;
+  left: -295px;
   top: 40px;
 }
 
 .Cancel {
   position: absolute;
-  top: 25px;
-  left: -5px;
-  padding: 5px;
+  top: 22px;
+  left: -10px;
+  padding: 8px;
   border-radius: 50%;
+  color: white;
+  background: none;
 }
 
 .Header_text .Header_text_area .Header_div {
@@ -375,13 +429,32 @@ input.inputOn {
   height: auto;
   flex-direction: column;
   position: absolute;
-  top: 88%;
-  left: 12.5px;
-  background: pink;
+  top: 68px;
+  left: 18px;
+  background: rgb(41, 41, 41);
   box-sizing: border-box;
   padding: 10px;
 }
 
+.Header_text .Header_text_area:nth-of-type(2) .Header_div {
+  left: 23px;
+}
+
+.Header_text .Header_text_area:nth-of-type(5) .Header_div {
+  top: 40px;
+  left: 0;
+}
+
+.Header_text .Header_text_area:nth-of-type(6) .Header_div {
+  top: 40px;
+  left: 0;
+}
+
+.Header_text .Header_text_area:nth-of-type(9) .Header_div {
+  top: 40px;
+  left: 0;
+}
+/* 
 .Header_text .Header_text_area:nth-of-type(2) .Header_div {
   display: flex;
   width: 200px;
@@ -390,7 +463,7 @@ input.inputOn {
   position: absolute;
   top: 88%;
   left: 19px;
-  background: pink;
+  background: rgb(41, 41, 41);
   box-sizing: border-box;
   padding: 10px;
 }
@@ -402,7 +475,7 @@ input.inputOn {
   position: absolute;
   top: 88%;
   left: 19px;
-  background: pink;
+  background: rgb(41, 41, 41);
   box-sizing: border-box;
   padding: 10px;
 }
@@ -415,20 +488,23 @@ input.inputOn {
   position: absolute;
   top: 88%;
   left: 20px;
-  background: pink;
+  background: rgb(41, 41, 41);
   box-sizing: border-box;
   padding: 10px;
-}
+} */
 
 .Header_text .Header_text_area .Header_div li {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  padding: 5px 50px 5px 10px;
+  padding: 10px 50px 10px 10px;
   margin: 10px 0;
-  background: red;
+  background: rgb(41, 41, 41);
+  border-radius: 10px;
+  opacity: 0.5;
 }
 
 .Header_text .Header_text_area .Header_div li:hover {
   background: gray;
+  opacity: 1;
 }

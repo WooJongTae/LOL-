@@ -7,7 +7,7 @@
 .Footer .Footer_service {
   width: 100%;
   height: 100px;
-  background: red;
+  background: rgb(41, 41, 41);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,10 +22,17 @@
   display: inline-block;
   margin: 0 20px;
   padding: 10px 15px;
+  cursor: pointer;
+}
+
+.Footer .Footer_service ul li a {
+  color: white;
+  font-weight: 600;
 }
 
 .Footer .Footer_service ul li:hover {
-  background: blue;
+  background: rgb(68, 68, 68);
+  border-radius: 7px;
 }
 
 .Footer .Footer_icon ul {

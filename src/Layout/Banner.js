@@ -3,31 +3,31 @@ import "./Banner.css";
 function Banner() {
   return (
     <div className="Banner">
-      <iframe
+      <video
         className="Banner_image"
-        src="https://www.youtube.com/embed/6k8bHfBKDT4"
-        title="YouTube video player"
-        auto
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
+        loop
+        autoPlay
+        muted
+        src="https://www.leagueoflegends.com/static/hero-blurred-7572101a2ce5e003b66483b7fe5c5d36.webm"
+      ></video>
       <div className="Banner_position">
-        <img
-          className="Logo"
-          src="/images/logo-1200-589b3ef693ce8a750fa4b4704f1e61f2.png"
-          alt="logo"
-        />
-        <iframe
-          className="Banner_image2"
-          src="https://www.youtube.com/embed/6k8bHfBKDT4"
-          title="YouTube video player"
-          auto
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-        <div className="Banner_position_line"></div>
+        <div className="Logo_position">
+          <img
+            className="Logo"
+            src="/images/logo-1200-589b3ef693ce8a750fa4b4704f1e61f2.png"
+            alt="logo"
+          />
+        </div>
+        <div className="video_position">
+          <video
+            className="Banner_image2"
+            src="https://www.leagueoflegends.com/static/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm"
+            autoPlay
+            loop
+            muted
+          ></video>
+        </div>
+        {/* <div className="Banner_position_line"></div> */}
         <div className="play">
           <span>무료로 플레이하기</span>
           <div className="play_line"></div>
