@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Social.css";
 
 function Social() {
+  const [image, setImage] = useState(0);
+  const ArrayImage = [
+    "	https://www.leagueoflegends.com/static/assassin-d64d3ffdda15e1eed637aefe6a2c7fee.png",
+    "https://www.leagueoflegends.com/static/assassin-d64d3ffdda15e1eed637aefe6a2c7fee.png",
+    "	https://www.leagueoflegends.com/static/assassin-d64d3ffdda15e1eed637aefe6a2c7fee.png",
+    "	https://www.leagueoflegends.com/static/assassin-d64d3ffdda15e1eed637aefe6a2c7fee.png",
+    "https://www.leagueoflegends.com/static/support-d63ae08baf517425864ddc020a5871d5.png",
+    "	https://www.leagueoflegends.com/static/tank-1245abc326bd98c567ab22659719a1a3.png",
+  ];
+
+  const ArrayMovie = [
+    "https://www.leagueoflegends.com/static/assassin-8bb741f0fe6d55c0844ede6e3fe1b5ad.webm",
+    "https://www.leagueoflegends.com/static/fighter-56f0e81707c5104dd35ee7a2b1d8e72a.webm",
+    "https://www.leagueoflegends.com/static/mage-8beae0975cae649908a0d539435306db.webm",
+    "https://www.leagueoflegends.com/static/marksman-d7367883b0979249f9309c03efdd23d9.webm",
+    "https://www.leagueoflegends.com/static/support-10b76f08757ee3ce7169c344108b457b.webm",
+    "https://www.leagueoflegends.com/static/tank-7bc533fcd17c3eca769764141020debb.webm",
+  ];
   return (
     <div className="Socials">
       <div className="area">

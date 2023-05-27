@@ -1,11 +1,37 @@
 .Round {
   width: 100%;
-  height: 100vh;
-
+  height: 140vh;
   position: relative;
+  background-repeat: no-repeat;
+}
+
+.Round_text2 {
+  padding-top: 100px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.Round_text2 p {
+  color: white;
+}
+
+.Round_text2 div {
+  padding: 10px 20px;
+  background: linear-gradient(-135deg, transparent 10px, rgb(11, 198, 227) 0)
+      right,
+    linear-gradient(45deg, transparent 10px, rgb(11, 198, 227) 0) left;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
 }
 
 .Round .Round_flex {
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,26 +40,33 @@
 
 .Round .Round_video {
   border-radius: 50%;
-  width: 500px;
-  height: 500px;
+  width: 400px;
+  height: 400px;
 }
 
 .Round .Round_flex .Round_sub_flex {
   position: absolute;
   display: flex;
-  margin-top: 40px;
-  top: 500px;
-  left: 59%;
+  margin-top: 80px;
+  top: 400px;
+  left: 85.5%;
   /* 9기준으로하면 */
   transform: translateX(-50%);
 }
 
 /* .Round .Round_flex .Round_sub_flex 123해서 각각 위치옮기기 */
 
-.Round .Round_flex .Round_sub_flex img {
+.Round .Round_flex .Round_sub_flex div {
+  position: relative;
+  z-index: 99;
+}
+
+.Round .Round_flex .Round_sub_flex div img {
   margin: 0 20px;
   width: 100px;
   height: 100px;
+  position: relative;
+  z-index: 99;
 }
 /* 
 .Round .Round_flex .Round_sub_flex.On img {
@@ -43,18 +76,29 @@
 .Round .Round_flex .Round_sub_flex .Round_img_1.On img {
   transform: scale(1.5);
 }
+.Round .Round_flex .Round_sub_flex .Round_img_2.On img {
+  transform: scale(1.5);
+}
+.Round .Round_flex .Round_sub_flex .Round_img_3.On img {
+  transform: scale(1.5);
+}
 
 .field {
+  width: 80px;
   position: absolute;
-  top: 650px;
+  top: 580px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 30px 40px;
+  padding: 30px 50px;
   background: blue;
   display: none;
+  z-index: 1;
 }
 
 .field.On {
+  position: relative;
+  padding: 30px 50px;
+  top: 180px;
   display: block;
 }
 
@@ -72,6 +116,7 @@
 }
 
 .Game_mode {
+  color: white;
   position: absolute;
   top: 50%;
   left: 0;
@@ -82,7 +127,7 @@
   content: "";
   width: 20px;
   height: 1px;
-  background: black;
+  background: white;
   position: absolute;
   right: -30px;
   top: 50%;

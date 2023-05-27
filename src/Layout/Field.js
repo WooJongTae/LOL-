@@ -4,11 +4,13 @@ function Field() {
   return (
     <div className="Field">
       <div className="Field_area">
-        <p className="position_play">플레이 방법</p>
-        <img
-          src="images/player-guide-map-1440-32575baa2f8d2b2bfd5cfd07e11d1361.png"
-          alt="imgs1"
-        />
+        <div className="Field_position">
+          <p className="position_play">플레이 방법</p>
+          <img
+            src="images/player-guide-map-1440-32575baa2f8d2b2bfd5cfd07e11d1361.png"
+            alt="imgs1"
+          />
+        </div>
       </div>
       <div className="Field_area" id="Field2">
         <div className="text">

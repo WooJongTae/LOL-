@@ -1,14 +1,14 @@
 .Socials {
   width: 100%;
   height: 200px;
-  background: red;
+  background: white;
   box-sizing: border-box;
   padding: 50px 150px;
   color: white;
 }
 
 .Socials .area {
-  background: linear-gradient(-135deg, green 40px, blue 0);
+  background: linear-gradient(-135deg, white 30px, rgb(5, 28, 36) 0);
   width: 1600px;
   height: 100px;
 }
@@ -20,7 +20,10 @@
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  font-size: 10px;
+}
+
+.area_flex h1 {
+  font-size: 15px;
 }
 
 .Socials_img {

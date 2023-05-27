@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Round.css";
 function Round() {
+  const [clickImage, setClickImage] = useState(1);
+
+  const backImage = [
+    "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt09b786139c8ce289/5d87c2420ca4b562bfff0abe/summonersrift.jpg",
+    "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blta1f5513b0207fc88/5d87c2428dbc4162c496928b/howlingabyss.jpg",
+    "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt7bb04c5fde905d4b/5e17889f9bcbce578d63ee51/teamfighttactics.jpg",
+  ];
   return (
-    <div className="Round">
+    <div
+      className="Round"
+      style={{
+        // backgroundImage: `url($backImage[clickImage])`,  참고해라
+        backgroundImage: `url(${backImage[clickImage]})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="Round_text2">
+        <p>다양하게</p>
+        <p>플레이</p>
+        <div>지금 플레이하기</div>
+      </div>
       <span className="Game_mode">게임모드</span>
       <div className="Round_flex">
         <video
@@ -13,19 +33,19 @@ function Round() {
           src="https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/blt368bbe12c8917439/5d87c69c5b3acf6e5c6efa6a/howlingabyss.mp4"
         ></video>
         <div className="Round_sub_flex ">
-          <div className="Round_img_1 On">
+          <div className={clickImage == 1 ? "Round_img_1 On" : "Round_img_1 "}>
             <img
               src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt09b786139c8ce289/5d87c2420ca4b562bfff0abe/summonersrift.jpg"
               alt="img-1"
             />
           </div>
-          <div className="Round_img_2">
+          <div className={clickImage == 2 ? "Round_img_2 On" : "Round_img_2 "}>
             <img
               src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blta1f5513b0207fc88/5d87c2428dbc4162c496928b/howlingabyss.jpg"
               alt="img-2"
             />
           </div>
-          <div className="Round_img_3">
+          <div className={clickImage == 3 ? "Round_img_3 On" : "Round_img_3 "}>
             <img
               src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt7bb04c5fde905d4b/5e17889f9bcbce578d63ee51/teamfighttactics.jpg"
               alt="img-3"
