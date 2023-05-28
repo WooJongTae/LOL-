@@ -12,7 +12,7 @@
 }
 
 .Container2 .video .center_text {
-  background: blue;
+  background: rgb(11, 189, 227);
   padding: 20px 30px;
   position: absolute;
   top: 50%;
@@ -22,13 +22,13 @@
 }
 
 .Container2 .video .center_line {
-  border: 1px solid red;
+  border: 1px solid rgb(211, 189, 186);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 210px;
-  height: 75px;
+  width: 170px;
+  height: 70px;
   border-radius: 20px 0 20px 0;
   cursor: pointer;
   z-index: 2;

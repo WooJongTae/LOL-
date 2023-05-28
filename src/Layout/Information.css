@@ -49,6 +49,20 @@
   margin: 0 auto;
   width: 80%;
   height: 50%;
+  position: relative;
+  transform: translateY(240px);
+  transition: all 2s ease;
+}
+
+.Information_container .Information_img.On {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 80%;
+  height: 50%;
+  position: relative;
+  transform: translateY(0);
+  transition: all 2s ease;
 }
 
 .Information_container .Information_img div {
@@ -64,11 +78,11 @@
 .Information_container .Information_img div::after {
   position: absolute;
   content: "";
-  border: 1px solid red;
+  border: 1px solid rgb(211, 189, 186);
   top: -5%;
   border-radius: 0 40px 0 0;
-  width: 100%;
-  height: 110%;
+  width: 88%;
+  height: 100%;
   transition: all 0.5s ease;
 }
 

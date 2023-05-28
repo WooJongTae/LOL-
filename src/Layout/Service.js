@@ -15,14 +15,17 @@ function Service() {
           <a href="#">
             <img
               className="imgs1"
-              src="/images/Download_on_the_App_Store_Badge_KR_RGB_blk_100317.27a03284.svg"
+              src={
+                process.env.PUBLIC_URL +
+                "/images/Download_on_the_App_Store_Badge_KR_RGB_blk_100317.27a03284.svg"
+              }
               alt="img"
             />
           </a>
           <a href="#">
             <img
               className="imgs2"
-              src="/images/ko_get.6d161200.svg"
+              src={process.env.PUBLIC_URL + "/images/ko_get.6d161200.svg"}
               alt="img"
             />
           </a>

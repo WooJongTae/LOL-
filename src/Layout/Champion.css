@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 100vh;
-  background: burlywood;
+  background: white;
   padding-top: 140px;
   padding-bottom: 185px;
 }
@@ -137,27 +137,90 @@
   height: 100%;
   margin: 0 20px;
   text-align: center;
-}
-.Champion_ul ul li svg.Class_image {
   position: relative;
-  width: 70%;
-  height: 50%;
-  margin: 0 auto;
+  cursor: pointer;
 }
 
+/* .Champion_ul ul li span {
+  font-weight: 800;
+  color: black;
+} */
+
+.Champion_ul ul li:hover svg.Class_image_none {
+  fill: black;
+  transform: translateY(-20px);
+  scale: 1.2;
+}
+
+.Champion_ul ul li svg.Class_image {
+  position: relative;
+  width: 80%;
+  height: 50%;
+  margin: 0 auto;
+  fill: black;
+}
+
+.Champion_ul ul li svg.Class_image_none {
+  position: relative;
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+  fill: rgb(230, 233, 236);
+}
+.svg_hover1 {
+  position: absolute;
+  top: -10px;
+  left: -28px;
+  width: 100px;
+}
 .svg_hover {
-  top: 0;
-  left: 0;
+  top: -15px;
+  left: -25px;
   position: absolute;
   width: 100px;
   height: 100px;
+  /* max-width: 100%;
+  max-height: 100%; */
+  fill: gold;
+}
+
+.svg_hover_none {
+  display: none;
 }
 .circle {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: red;
+  background: rgb(230, 233, 236);
   margin: 0 auto;
+}
+
+.circle.On {
+  position: relative;
+  background: gold;
+}
+
+.circle.On::before {
+  content: "";
+  position: absolute;
+  background-color: gold;
+  top: -24px;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-50%);
+  height: 36px;
+}
+
+.circle.On::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border: 1px solid gold;
 }
 
 .Champion_container video {
@@ -180,7 +243,7 @@
 .img_screen_name {
   position: absolute;
   top: 800px;
-  right: 550px;
+  right: 500px;
   text-align: center;
 }
 
@@ -189,7 +252,7 @@
   top: 342px;
   width: 2900px;
   height: 2px;
-  background-color: red;
+  background-color: rgb(230, 233, 236);
 }
 
 .line_circle {
@@ -199,5 +262,14 @@
   left: 951px;
   top: -30px;
   border-radius: 50%;
-  border: 1px solid red;
+  border: 1px solid rgb(230, 233, 236);
+}
+
+.img_screen_name h1 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.img_screen_name p {
+  font-size: 14px;
 }

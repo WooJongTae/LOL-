@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Information.css";
+import { useEffect } from "react";
 function Information() {
-  // 여기에 스크롤추가해서 효과주기
+  const [Scroll, setScroll] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleScroll = () => {
+    if (window.scrollY >= 5100 && window.scrollY < 5800) {
+      setScroll(true);
+    } else {
+      setScroll(false);
+    }
+    console.log(window.scrollY);
+  };
+  // 여기에 스크롤추가해서 효과주기 5300 6000
   return (
     <div className="Information_container">
       <div className="position">
@@ -11,7 +25,7 @@ function Information() {
         <h1>더 자세히</h1>
         <h4>알아보기</h4>
       </div>
-      <div className="Information_img">
+      <div className={Scroll ? "Information_img On" : "Information_img"}>
         <div>
           <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt9c75fd93a4a85975/646bc39e168829409a6d62d0/msi-2023-bracket-2-Textless_Thumb.jpg?quality=90&width=1380" />
           <p>

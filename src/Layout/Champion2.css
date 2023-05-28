@@ -1,7 +1,12 @@
 .Champion2 {
   width: 100%;
   height: 100vh;
-  background: red;
+  background-color: rgb(215, 248, 255);
+  background-image: url(https://www.leagueoflegends.com/static/championstyle_01-dc617921291c69586acbebec745b4191.png),
+    url(https://www.leagueoflegends.com/static/championstyle_02-95fa98258784f905be83831947a1f07c.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
 }
 
@@ -16,6 +21,7 @@
 }
 
 .button {
+  color: white;
   width: 150px;
   line-height: 40px;
   text-align: center;
@@ -27,7 +33,7 @@
   background-repeat: no-repeat;
 }
 
-.button:hover {
+/* .button:hover {
   background: linear-gradient(
         -135deg,
         rgb(11, 198, 227) 10px,
@@ -35,7 +41,7 @@
       )
       right,
     linear-gradient(45deg, rgb(11, 198, 227) 10px, rgb(11, 198, 227) 0) left;
-}
+} */
 
 .button:hover {
   background: linear-gradient(-45deg, rgb(11, 198, 227) 0, rgb(11, 198, 227) 0)
@@ -47,7 +53,6 @@
   position: absolute;
   width: 500px;
   height: 500px;
-  background: blue;
   top: 30%;
   right: 150px;
   text-align: center;

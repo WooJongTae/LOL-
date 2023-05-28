@@ -3,6 +3,8 @@
   height: 140vh;
   position: relative;
   background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 2s ease;
 }
 
 .Round_text2 {
@@ -18,11 +20,28 @@
   color: white;
 }
 
+.Round_text2 p:nth-of-type(1) {
+  font-size: 30px;
+}
+
+.Round_text2 p:nth-of-type(2) {
+  font-size: 70px;
+}
+
 .Round_text2 div {
   padding: 10px 20px;
   background: linear-gradient(-135deg, transparent 10px, rgb(11, 198, 227) 0)
       right,
     linear-gradient(45deg, transparent 10px, rgb(11, 198, 227) 0) left;
+  background-size: 50% 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.Round_text2 div:hover {
+  padding: 10px 20px;
+  background: linear-gradient(-135deg, transparent 0, rgb(11, 198, 227) 0) right,
+    linear-gradient(45deg, transparent 0, rgb(11, 198, 227) 0) left;
   background-size: 50% 100%;
   background-repeat: no-repeat;
 }
@@ -38,13 +57,14 @@
   flex-direction: column;
 }
 
-.Round .Round_video {
+.Round .Round_flex .Round_video {
   border-radius: 50%;
   width: 400px;
   height: 400px;
+  transition: all 2s ease;
 }
 
-.Round .Round_flex .Round_sub_flex {
+.Round .Round_flex .Round_sub_flex.trans0 {
   position: absolute;
   display: flex;
   margin-top: 80px;
@@ -52,6 +72,32 @@
   left: 85.5%;
   /* 9기준으로하면 */
   transform: translateX(-50%);
+  transition: all 2s ease;
+  z-index: 999;
+}
+
+.Round .Round_flex .Round_sub_flex.trans1 {
+  position: absolute;
+  display: flex;
+  margin-top: 80px;
+  top: 400px;
+  left: 50%;
+  /* 9기준으로하면 */
+  transform: translateX(-50%);
+  transition: all 2s ease;
+  z-index: 999;
+}
+
+.Round .Round_flex .Round_sub_flex.trans2 {
+  position: absolute;
+  display: flex;
+  margin-top: 80px;
+  top: 400px;
+  left: 14.5%;
+  /* 9기준으로하면 */
+  transform: translateX(-50%);
+  transition: all 2s ease;
+  z-index: 999;
 }
 
 /* .Round .Round_flex .Round_sub_flex 123해서 각각 위치옮기기 */
@@ -74,24 +120,27 @@
 } */
 
 .Round .Round_flex .Round_sub_flex .Round_img_1.On img {
+  transition: all 2s ease;
   transform: scale(1.5);
 }
 .Round .Round_flex .Round_sub_flex .Round_img_2.On img {
+  transition: all 2s ease;
   transform: scale(1.5);
 }
 .Round .Round_flex .Round_sub_flex .Round_img_3.On img {
+  transition: all 2s ease;
   transform: scale(1.5);
 }
 
 .field {
   width: 80px;
   position: absolute;
-  top: 580px;
+  top: 280px;
   left: 50%;
   transform: translateX(-50%);
   padding: 30px 50px;
-  background: blue;
-  display: none;
+  background: rgb(11, 198, 227);
+  opacity: 0;
   z-index: 1;
 }
 
@@ -99,7 +148,8 @@
   position: relative;
   padding: 30px 50px;
   top: 180px;
-  display: block;
+  opacity: 1;
+  transition: all 2s ease;
 }
 
 .Round_text {
@@ -107,12 +157,40 @@
   position: absolute;
   top: 800px;
   left: 50%;
+  width: 800px;
   transform: translateX(-50%);
-  display: none;
+  display: block;
+  opacity: 0;
+  color: white;
+}
+
+.Round_text p:nth-of-type(1) {
+  transition: all 1s ease;
+  transform: translateY(-20px);
+}
+
+.Round_text p:nth-of-type(2) {
+  transition: all 1s ease;
+  transform: translateY(20px);
+}
+
+.Round_text.On p:nth-of-type(1) {
+  transition: all 1s ease;
+  transform: translateY(0);
+}
+
+.Round_text.On p:nth-of-type(2) {
+  transition: all 1s ease;
+  transform: translateY(0);
 }
 
 .Round_text.On {
-  display: block;
+  opacity: 1;
+}
+
+.Round_text.On p:nth-of-type(1) {
+  font-weight: 700;
+  font-size: 15px;
 }
 
 .Game_mode {

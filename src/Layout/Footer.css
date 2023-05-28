@@ -55,7 +55,13 @@
 }
 
 .Footer .Footer_icon ul li a {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Footer .Footer_icon ul li:nth-of-type(1) a {
+  margin-top: 2px;
 }
 
 .Footer .Footer_icon ul li svg {

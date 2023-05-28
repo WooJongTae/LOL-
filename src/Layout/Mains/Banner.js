@@ -1,6 +1,7 @@
 import React from "react";
 import "./Banner.css";
 function Banner() {
+  // "/images/logo-1200-589b3ef693ce8a750fa4b4704f1e61f2.png"
   return (
     <div className="Banner">
       <video
@@ -14,7 +15,10 @@ function Banner() {
         <div className="Logo_position">
           <img
             className="Logo"
-            src="/images/logo-1200-589b3ef693ce8a750fa4b4704f1e61f2.png"
+            src={
+              process.env.PUBLIC_URL +
+              "/images/logo-1200-589b3ef693ce8a750fa4b4704f1e61f2.png"
+            }
             alt="logo"
           />
         </div>
