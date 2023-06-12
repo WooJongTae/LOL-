@@ -10,6 +10,12 @@
   position: relative;
 }
 
+.Champion2 .inner {
+  width: 1960px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .Champion2 .Champion2_center {
   text-align: center;
 }

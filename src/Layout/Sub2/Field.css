@@ -6,6 +6,12 @@
   display: flex;
 }
 
+.Field .inner {
+  margin: 0 auto;
+  width: 1960px;
+  position: relative;
+}
+
 .Field .Field_area {
   width: 50%;
   height: 100%;

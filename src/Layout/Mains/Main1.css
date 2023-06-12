@@ -1,10 +1,20 @@
+.position_main {
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
 .Main {
   position: absolute;
-  top: 635px;
+  top: 0;
   left: 0;
   width: 100%;
   height: 400px;
   z-index: 10;
+}
+
+.Main .inner {
+  margin: 0 auto;
+  width: 100%;
 }
 
 .container {
@@ -27,7 +37,7 @@
   height: 200px;
   border: 1px solid rgb(193, 193, 193);
   border-radius: 0 40px 0 0;
-  margin: 0 80px;
+  margin: 0 5%;
   transition: all 0.5s ease;
   cursor: pointer;
   background: white;
@@ -92,7 +102,7 @@
   position: absolute;
   -webkit-transform: rotate(-90deg);
   top: 45%;
-  left: 0;
+  left: -1%;
 }
 
 .container h3::after {
@@ -116,4 +126,13 @@
   content: "->";
   display: inline-block;
   color: green;
+}
+
+@media screen and (max-width: 767px) {
+  .part:nth-of-type(3) {
+    display: none;
+  }
+  .container h3 {
+    left: -3%;
+  }
 }

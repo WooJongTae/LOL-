@@ -1,6 +1,5 @@
-import React from "react";
-import "./Banner.css";
-function Banner() {
+import "./MobileBanner.css";
+function MobileBanner() {
   // "/images/logo-1200-589b3ef693ce8a750fa4b4704f1e61f2.png"
   return (
     <div className="Banner">
@@ -24,13 +23,15 @@ function Banner() {
             />
           </div>
           <div className="video_position">
-            <video
-              className="Banner_image2"
-              src="https://www.leagueoflegends.com/static/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm"
-              autoPlay
-              loop
-              muted
-            ></video>
+            <div className="video_position_inner">
+              <video
+                className="Banner_image2"
+                src="https://www.leagueoflegends.com/static/hero-0632cbf2872c5cc0dffa93d2ae8a29e8.webm"
+                autoPlay
+                loop
+                muted
+              ></video>
+            </div>
           </div>
           {/* <div className="Banner_position_line"></div> */}
           <div className="play">
@@ -43,4 +44,4 @@ function Banner() {
   );
 }
 
-export default Banner;
+export default MobileBanner;

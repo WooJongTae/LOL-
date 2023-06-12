@@ -53,3 +53,38 @@
   left: 110px;
   top: 3%;
 }
+
+@media screen and (max-width: 767px) {
+  .Container {
+    height: 120px;
+  }
+  .Container .Container_width {
+    flex-direction: column;
+  }
+
+  .Container .Container_width h1 {
+    margin-left: 0px;
+    height: 30%;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+  }
+
+  .Container .Container_width .explain {
+    width: 100%;
+    height: 20%;
+    line-height: 100%;
+  }
+
+  .Container .Container_width .imgs {
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    padding-left: 30px;
+  }
+  .Container .Container_width .imgs a .imgs2 {
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}

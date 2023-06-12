@@ -16,7 +16,7 @@
 
 .Banner_position {
   z-index: 9999;
-  top: 5%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -36,7 +36,7 @@
   width: 35%;
   height: auto;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   z-index: 9999;
   transform: translate(-50%, -50%);
@@ -45,6 +45,11 @@
 .video_position {
   width: 100%;
   height: 100%;
+}
+
+.video_position .inner {
+  box-sizing: border-box;
+  padding: 5%;
 }
 
 .Banner .Banner_position .Banner_image2 {
@@ -58,6 +63,7 @@
   width: 98%;
   height: 105%;
   border: 1px solid red;
+  z-index: 9999;
   border-radius: 0 30px 0 30px;
   opacity: 0.6;
   transform: translate(-2.5%, -2.5%);
@@ -73,31 +79,31 @@
 }
 
 /* .Banner .Banner_position::after {
-  content: "";
-  position: absolute;
-  width: 98%;
-  height: 105%;
-  background: linear-gradient(-135deg, blue 50px, red 0); 
-  선만 바꾸기 불가능 ㅜㅜ
-  border: 1px solid red;
-  border-radius: 0 50px 0 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 59999;
-} */
+    content: "";
+    position: absolute;
+    width: 98%;
+    height: 105%;
+    background: linear-gradient(-135deg, blue 50px, red 0); 
+    선만 바꾸기 불가능 ㅜㅜ
+    border: 1px solid red;
+    border-radius: 0 50px 0 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 59999;
+  } */
 
 /* .Banner .Banner_position::after:hover {
-  border: 1px solid blue;
-  border-radius: 0 1150px 0 0;
-}
-가상요소에 hover가 안되나? */
+    border: 1px solid blue;
+    border-radius: 0 1150px 0 0;
+  }
+  가상요소에 hover가 안되나? */
 
 .play {
   background: rgb(11, 198, 227);
   position: absolute;
   padding: 15px 30px;
-  top: 65%;
+  top: 75%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 99999;

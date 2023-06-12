@@ -1,0 +1,83 @@
+/* 모바일 헤더 */
+
+.mobileHeader_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: red;
+  z-index: 9999;
+}
+
+.mobileHeader_header_flex {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* 이미지 */
+
+.mobileHeader_header_flex .mobileHeader_header_image {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  background: blue;
+  width: 20%;
+  height: 100%;
+  box-sizing: border-box;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.Header_flex_button {
+  margin-left: 10px;
+}
+
+.mobileHeader_header_flex .mobileHeader_header_image:hover {
+  fill: white;
+}
+
+/* 로고 */
+
+.mobileHeader_header_flex .mobileHeader_header_logo {
+  display: flex;
+  align-items: center;
+  background: yellow;
+  width: 60%;
+  height: 100%;
+  padding-left: 20px;
+}
+
+/* 기타버튼 */
+
+.mobileHeader_header_flex .mobileHeader_header_bar {
+  display: flex;
+  background: gold;
+  width: 20%;
+  height: 100%;
+}
+
+.mobileHeader_header_flex .mobileHeader_header_bar .bar1 {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileHeader_header_flex .mobileHeader_header_bar .bar2 {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobileHeader_header_flex .mobileHeader_header_bar .bar3 {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
