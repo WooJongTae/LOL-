@@ -3,6 +3,10 @@ import "./Service.css";
 
 // 임폴트해보기
 function Service() {
+  const serviceImages = [
+    "/images/Download_on_the_App_Store_Badge_KR_RGB_blk_100317.27a03284.svg",
+    "/images/ko_get.6d161200.svg",
+  ];
   return (
     <div className="Container">
       <div className="Container_width">
@@ -12,23 +16,15 @@ function Service() {
           e스포츠 소식을 확인해 보세요.
         </div>
         <div className="imgs">
-          <a href="#">
-            <img
-              className="imgs1"
-              src={
-                process.env.PUBLIC_URL +
-                "/images/Download_on_the_App_Store_Badge_KR_RGB_blk_100317.27a03284.svg"
-              }
-              alt="img"
-            />
-          </a>
-          <a href="#">
-            <img
-              className="imgs2"
-              src={process.env.PUBLIC_URL + "/images/ko_get.6d161200.svg"}
-              alt="img"
-            />
-          </a>
+          {serviceImages.map((serviceImage) => (
+            <a href="#">
+              <img
+                className="imgs1"
+                src={process.env.PUBLIC_URL + serviceImage}
+                alt="img"
+              />
+            </a>
+          ))}
         </div>
       </div>
     </div>

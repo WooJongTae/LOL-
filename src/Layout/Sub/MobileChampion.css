@@ -1,4 +1,5 @@
 .MobileChampion {
+  overflow: hidden;
   position: relative;
   width: 100%;
   height: 100vh;
@@ -24,18 +25,18 @@
 .Champion_text {
   text-align: center;
   position: absolute;
-  top: -5%;
+  top: 0%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9997;
 }
 
 .Champion_text p:nth-of-type(1) {
-  font-size: 30px;
+  font-size: 10px;
 }
 
 .Champion_text h1 {
-  font-size: 50px;
+  font-size: 20px;
   font-weight: 900;
 }
 

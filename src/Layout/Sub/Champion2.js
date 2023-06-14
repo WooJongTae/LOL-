@@ -13,7 +13,6 @@ function Champion2() {
   useEffect(() => {
     const interval = setInterval(() => {
       setChampion((prevCount) => (prevCount === 3 ? 0 : prevCount + 1));
-      console.log(Champion);
     }, 4000);
 
     return () => clearInterval(interval);

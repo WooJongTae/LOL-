@@ -1,85 +1,15 @@
 import React, { useState } from "react";
 import "./Champion.css";
+import SubData from "./SubData";
 function Champion() {
-  const ArrayImage = [
-    "https://www.leagueoflegends.com/static/assassin-d64d3ffdda15e1eed637aefe6a2c7fee.png",
-    "https://www.leagueoflegends.com/static/fighter-7a08920b696ecdb673edeeae1d3c616e.png",
-    "https://www.leagueoflegends.com/static/mage-3bfa6dfe620adafe5e539c2e470f4acc.png",
-    "https://www.leagueoflegends.com/static/marksman-b339ed8fd7e04ff2c3fca022c5d299fb.png",
-    "https://www.leagueoflegends.com/static/support-d63ae08baf517425864ddc020a5871d5.png",
-    "https://www.leagueoflegends.com/static/tank-1245abc326bd98c567ab22659719a1a3.png",
-  ];
+  const { ArrayImage, ArrayMovie, ChampionName, ChampionEx } = SubData;
 
-  const ArrayMovie = [
-    "https://www.leagueoflegends.com/static/assassin-8bb741f0fe6d55c0844ede6e3fe1b5ad.webm",
-    "https://www.leagueoflegends.com/static/fighter-56f0e81707c5104dd35ee7a2b1d8e72a.webm",
-    "https://www.leagueoflegends.com/static/mage-8beae0975cae649908a0d539435306db.webm",
-    "https://www.leagueoflegends.com/static/marksman-d7367883b0979249f9309c03efdd23d9.webm",
-    "https://www.leagueoflegends.com/static/support-10b76f08757ee3ce7169c344108b457b.webm",
-    "https://www.leagueoflegends.com/static/tank-7bc533fcd17c3eca769764141020debb.webm",
-  ];
-
-  const ChampionName = [
-    "아칼리",
-    "야스오",
-    "럭스",
-    "징크스",
-    "쓰레쉬",
-    "레오나",
-  ];
-
-  const ChampionEx = [
-    "섬기는 이 없는 암살자",
-    "용서받지 못한 자",
-    "광명의 소녀",
-    "난폭한 말괄량이",
-    "지옥의 간수",
-    "여명의 빛",
-  ];
   const [number, setNumber] = useState(0);
 
   const imageChange = (num) => {
     setNumber(num);
   };
   return (
-    //     import React, { useState } from 'react';
-
-    // const MyFunctionalComponent = () => {
-    //   const [activeDiv, setActiveDiv] = useState(null);
-
-    //   const handleDivClick = (divIndex) => {
-    //     setActiveDiv(divIndex);
-    //   };
-
-    //   const defaultClass = 'my-class';
-
-    //   return (
-    //     <div>
-    //       <div
-    //         className={activeDiv ==== 1 ? `${defaultClass} nodia` : ''}
-    //         onClick={() => handleDivClick(1)}
-    //       >
-    //         {/* 첫 번째 div */}
-    //       </div>
-    //       <div
-    //         className={activeDiv ==== 2 ? `${defaultClass} nodia` : ''}
-    //         onClick={() => handleDivClick(2)}
-    //       >
-    //         {/* 두 번째 div */}
-    //       </div>
-    //       <div
-    //         className={activeDiv ==== 3 ? `${defaultClass} nodia` : ''}
-    //         onClick={() => handleDivClick(3)}
-    //       >
-    //         {/* 세 번째 div */}
-    //       </div>
-    //       {/* 추가적인 div들 */}
-    //     </div>
-    //   );
-    // }
-
-    // export default MyFunctionalComponent;
-    // onclick으로 1,2,3,4,5 이렇게 값을 넘겨줘서??
     <div className="Champion">
       <div className="inner">
         <div className="Champion_container">
@@ -105,10 +35,6 @@ function Champion() {
             <div className="Champion_ul">
               <ul>
                 <li onClick={() => imageChange(0)}>
-                  {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-                  <path d="M59.84 7.78L50 17.63l-4.43-4.43-5.41-5.42a46.63 46.63 0 1019.68 0zm-12 12L50 22l2.2-2.19 4.67-4.67a38.86 38.86 0 11-13.74 0zM50 96.89a43.52 43.52 0 01-10.82-85.68l2.59 2.59a40.42 40.42 0 1016.46 0l2.59-2.59A43.52 43.52 0 0150 96.89z"></path>
-                  <path d="M55.44 5.44L50 10.88l-5.44-5.44L50 0z"></path>
-                </svg> */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 100 100"

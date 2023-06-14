@@ -71,29 +71,6 @@ function MobileChampion() {
                     </span>
                   </li>
                 ))}
-                {/* <li onClick={() => imageChange(0)}>
-                  <span>암살자</span>
-                </li>
-                <li onClick={() => imageChange(1)}>
-                  <span>전사</span>
-                  <div className={1 === number ? "circle On" : "circle"}></div>
-                </li>
-                <li onClick={() => imageChange(2)}>
-                  <span>마법사</span>
-                  <div className={2 === number ? "circle On" : "circle"}></div>
-                </li>
-                <li onClick={() => imageChange(3)}>
-                  <span>원거리 딜러</span>
-                  <div className={3 === number ? "circle On" : "circle"}></div>
-                </li>
-                <li onClick={() => imageChange(4)}>
-                  <span>서포터</span>
-                  <div className={4 === number ? "circle On" : "circle"}></div>
-                </li>
-                <li onClick={() => imageChange(5)}>
-                  <span>탱커</span>
-                  <div className={5 === number ? "circle On" : "circle"}></div>
-                </li> */}
               </ul>
             </div>
             <img
