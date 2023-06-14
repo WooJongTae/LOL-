@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Information.css";
 import { useEffect } from "react";
+
 function Information() {
   const [Scroll, setScroll] = useState(false);
   useEffect(() => {
@@ -9,7 +10,6 @@ function Information() {
 
   const handleScroll = () => {
     const height = window.innerHeight;
-    console.log(height);
     if (window.scrollY >= height * 4.9535 && window.scrollY < height * 6.455) {
       setScroll(true);
     } else {

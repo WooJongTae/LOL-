@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import "./MobileChampion2.css";
 import { useEffect } from "react";
+import SubData from "./SubData";
 function Champion2() {
   const [Champion, setChampion] = useState(0);
-  const ChampionColor = [
-    "https://www.leagueoflegends.com/static/assassin-three-3b9f65b6c20d5779628f7a8b04b43819.png",
-    "https://www.leagueoflegends.com/static/assassin-four-d763afcd430fe6194d5640d6bf2a5941.png",
-    "https://www.leagueoflegends.com/static/assassin-two-3a0fb5383eca19a4bc9b3c53310380bf.png",
-    "https://www.leagueoflegends.com/static/assassin-d64d3ffdda15e1eed637aefe6a2c7fee.png",
-  ];
+  const { ChampionColor } = SubData;
 
   useEffect(() => {
     const interval = setInterval(() => {

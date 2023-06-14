@@ -22,7 +22,7 @@
     padding-bottom: 185px; */
 }
 
-.Champion_text {
+.Mobile_Champion_text {
   text-align: center;
   position: absolute;
   top: 0%;
@@ -31,20 +31,20 @@
   z-index: 9997;
 }
 
-.Champion_text p:nth-of-type(1) {
+.Mobile_Champion_text p:nth-of-type(1) {
   font-size: 10px;
 }
 
-.Champion_text h1 {
+.Mobile_Champion_text h1 {
   font-size: 20px;
   font-weight: 900;
 }
 
-.Champion_text p:nth-of-type(2) {
+.Mobile_Champion_text p:nth-of-type(2) {
   font-size: 12px;
 }
 
-.Champion_text .Champion_div {
+.Mobile_Champion_text .Champion_div {
   width: 500px;
   height: 100px;
   margin: 0 auto;
@@ -53,7 +53,7 @@
   align-items: center;
 }
 
-.Champion_text .Champion_div div:nth-of-type(1) {
+.Mobile_Champion_text .Champion_div div:nth-of-type(1) {
   box-sizing: border-box;
   margin: 0 20px;
   width: 50%;
@@ -69,7 +69,7 @@
   transition: all 0.5s ease;
 }
 
-.Champion_text .Champion_div div:nth-of-type(2) {
+.Mobile_Champion_text .Champion_div div:nth-of-type(2) {
   box-sizing: border-box;
   margin: 0 20px;
   width: 50%;
@@ -85,7 +85,7 @@
   transition: all 0.5s ease;
 }
 
-.Champion_text .Champion_div div:nth-of-type(1):hover {
+.Mobile_Champion_text .Champion_div div:nth-of-type(1):hover {
   background: linear-gradient(
         -135deg,
         rgb(208, 168, 92) 10px,
@@ -95,7 +95,7 @@
     linear-gradient(45deg, rgb(208, 168, 92) 10px, rgb(208, 168, 92) 0) left;
 }
 
-.Champion_text .Champion_div div:nth-of-type(2):hover {
+.Mobile_Champion_text .Champion_div div:nth-of-type(2):hover {
   background: linear-gradient(
         -135deg,
         rgb(11, 198, 227) 10px,
@@ -168,7 +168,7 @@
   font-weight: 800;
 }
 
-.img_screen_name {
+.Mobile_img_screen_name {
   position: absolute;
   top: 160%;
   left: 50%;
@@ -177,13 +177,13 @@
   width: 100%;
 }
 
-.img_screen_name h1 {
+.Mobile_img_screen_name h1 {
   margin: 0 auto;
   font-size: 20px;
   font-weight: 800;
 }
 
-.img_screen_name p {
+.Mobile_img_screen_name p {
   font-size: 14px;
 }
 
@@ -213,19 +213,19 @@
   .Mobile_Champion_ul ul li {
     margin: 0 0px;
   }
-  .Champion_text p:nth-of-type(2) {
+  .Mobile_Champion_text p:nth-of-type(2) {
     font-size: 12px;
     width: 50%;
     margin: 0 auto;
   }
-  .Champion_text .Champion_div {
+  .Mobile_Champion_text .Champion_div {
     display: flex;
     align-items: center;
     flex-direction: column;
     height: auto;
     margin-top: 10px;
   }
-  .Champion_text .Champion_div div:nth-of-type(1) {
+  .Mobile_Champion_text .Champion_div div:nth-of-type(1) {
     margin: 5px 20px;
   }
 }

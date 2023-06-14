@@ -1,12 +1,10 @@
 import React from "react";
 import "./Service.css";
-
+import FootersData from "./FootersData";
 // 임폴트해보기
 function Service() {
-  const serviceImages = [
-    "/images/Download_on_the_App_Store_Badge_KR_RGB_blk_100317.27a03284.svg",
-    "/images/ko_get.6d161200.svg",
-  ];
+  const { serviceImages } = FootersData;
+
   return (
     <div className="Container">
       <div className="Container_width">

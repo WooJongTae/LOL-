@@ -1,27 +1,9 @@
 import React, { useState } from "react";
 import "./Header.css";
 import HeaderClick from "./HeaderClick";
+import HeadersData from "./HeadersData";
 function Header() {
-  const headerNameLists = [
-    [
-      "리그 오브 레전드",
-      "발로란트",
-      "전략적 팀 전투",
-      "레전드 오브 룬테라",
-      "리그 오브 레전드:와이들 리프트",
-    ],
-    [
-      "시간/교차",
-      "마법공학 아수라장",
-      "마력 척결관",
-      "몰락한 왕",
-      "누누의 노래",
-      "RIOT FORGE의 게임",
-    ],
-    ["리그 오브 레전드 e스포츠", "발로란트 e스포츠"],
-    ["엔터테인먼트", "아케인", "유니버스", "라이엇 게임즈 뮤직"],
-    ["라이엇 게임즈", "라이엇 스토어", "라이엇 모바일", "라이엇 고객지원"],
-  ];
+  const { headerNameLists } = HeadersData;
 
   const [logo, setLogo] = useState(false);
   const [onSearch, setOnSearch] = useState(false);

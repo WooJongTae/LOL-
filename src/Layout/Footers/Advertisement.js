@@ -1,8 +1,8 @@
 import React from "react";
 import "./Advertisement.css";
-import Video from "../svg/VideoLink";
+import FootersData from "./FootersData";
 
-const AdvertisementVideo = Video.AdvertisementVideo;
+const { AdvertisementVideo } = FootersData;
 
 function Advertisement() {
   return (

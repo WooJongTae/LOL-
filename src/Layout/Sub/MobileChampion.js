@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import name from "../svg/name";
 import "./MobileChampion.css";
+import SubData from "./SubData";
+
 function MobileChampion() {
-  const ArrayImage = name.ArrayImage;
   // const ArrayImage = [
   //   "https://www.leagueoflegends.com/static/assassin-d64d3ffdda15e1eed637aefe6a2c7fee.png",
   //   "https://www.leagueoflegends.com/static/fighter-7a08920b696ecdb673edeeae1d3c616e.png",
@@ -11,24 +11,7 @@ function MobileChampion() {
   //   "https://www.leagueoflegends.com/static/support-d63ae08baf517425864ddc020a5871d5.png",
   //   "https://www.leagueoflegends.com/static/tank-1245abc326bd98c567ab22659719a1a3.png",
   // ];
-
-  const ChampionName = [
-    "아칼리",
-    "야스오",
-    "럭스",
-    "징크스",
-    "쓰레쉬",
-    "레오나",
-  ];
-
-  const ChampionEx = [
-    "섬기는 이 없는 암살자",
-    "용서받지 못한 자",
-    "광명의 소녀",
-    "난폭한 말괄량이",
-    "지옥의 간수",
-    "여명의 빛",
-  ];
+  const { ChampionName, ChampionEx, ArrayImages } = SubData;
 
   const [number, setNumber] = useState(0);
 
@@ -39,7 +22,7 @@ function MobileChampion() {
     <div className="MobileChampion">
       <div className="inner">
         <div className="Champion_container">
-          <div className="Champion_text">
+          <div className="Mobile_Champion_text">
             <p>챔피언을</p>
             <h1>선택하세요</h1>
             <p>
@@ -75,12 +58,12 @@ function MobileChampion() {
             </div>
             <img
               className="Mobile_img_screen"
-              src={ArrayImage[number]}
+              src={ArrayImages[number]}
               alt="imgs"
             />
             <div className="Mobile_img_circle"></div>
           </div>
-          <div className="img_screen_name">
+          <div className="Mobile_img_screen_name">
             {/* 여기 하드코딩 const로 배열만들어서넣기 이미지도 */}
             <h1 className="MobileChampionName">{ChampionName[number]}</h1>
             <br />
