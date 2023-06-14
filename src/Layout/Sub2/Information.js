@@ -10,7 +10,7 @@ function Information() {
   const handleScroll = () => {
     const height = window.innerHeight;
     console.log(height);
-    if (window.scrollY >= height * 4.9535 && window.scrollY < height * 5.9855) {
+    if (window.scrollY >= height * 4.9535 && window.scrollY < height * 6.455) {
       setScroll(true);
     } else {
       setScroll(false);

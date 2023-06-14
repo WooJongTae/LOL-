@@ -3,12 +3,14 @@ import "./Round.css";
 function Round() {
   const [clickImage, setClickImage] = useState(0);
   const [className, setClassName] = useState("trans0");
+  const roundFields = ["소환사의 협곡", "무작위 총력전", "전략적 팀 전투"];
+  console.log(clickImage);
   const RoundVideo = [
     "https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/blt04d1a8eb899e9dd4/5d87c234c7fab32df76ddee5/summonersrift.mp4",
     "https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/blt368bbe12c8917439/5d87c69c5b3acf6e5c6efa6a/howlingabyss.mp4",
     "https://assets.contentstack.io/v3/assets/blt731acb42bb3d1659/blt358cbfdb47618c25/5d87c2345b3acf6e5c6efa5e/teamfighttactics.mp4",
   ];
-  const backImage = [
+  const backImages = [
     "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt09b786139c8ce289/5d87c2420ca4b562bfff0abe/summonersrift.jpg",
     "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blta1f5513b0207fc88/5d87c2428dbc4162c496928b/howlingabyss.jpg",
     "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt7bb04c5fde905d4b/5e17889f9bcbce578d63ee51/teamfighttactics.jpg",
@@ -50,53 +52,29 @@ function Round() {
             src={RoundVideo[clickImage]}
           ></video>
           <div className={`Round_sub_flex ${className}`}>
-            <div
-              className={clickImage == 0 ? "Round_img_1 On" : "Round_img_1 "}
-              onClick={() => {
-                imageNumber(0);
-                translateClick("trans0");
-              }}
-            >
-              <img
-                src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt09b786139c8ce289/5d87c2420ca4b562bfff0abe/summonersrift.jpg"
-                alt="img-1"
-              />
-            </div>
-            <div
-              className={clickImage == 1 ? "Round_img_2 On" : "Round_img_2 "}
-              onClick={() => {
-                imageNumber(1);
-                translateClick("trans1");
-              }}
-            >
-              <img
-                src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blta1f5513b0207fc88/5d87c2428dbc4162c496928b/howlingabyss.jpg"
-                alt="img-2"
-              />
-            </div>
-            <div
-              className={clickImage == 2 ? "Round_img_3 On" : "Round_img_3 "}
-              onClick={() => {
-                imageNumber(2);
-                translateClick("trans2");
-              }}
-            >
-              <img
-                src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt7bb04c5fde905d4b/5e17889f9bcbce578d63ee51/teamfighttactics.jpg"
-                alt="img-3"
-              />
-            </div>
+            {backImages.map((backImage, i) => (
+              <div
+                className={
+                  clickImage == i
+                    ? `Round_img_${i + 1} On`
+                    : `Round_img_${i + 1} `
+                }
+                onClick={() => {
+                  imageNumber(i);
+                  translateClick(`trans${i}`);
+                }}
+              >
+                <img src={backImage} alt={`img-${i + 1}`} />
+              </div>
+            ))}
           </div>
+
           <div>
-            <div className={clickImage == 0 ? "field On" : "field"}>
-              소환사의 협곡
-            </div>
-            <div className={clickImage == 1 ? "field On" : "field"}>
-              무작위 총력전
-            </div>
-            <div className={clickImage == 2 ? "field On" : "field"}>
-              전략적 팀 전투
-            </div>
+            {roundFields.map((roundField, i) => (
+              <div className={clickImage == i ? "field On" : "field"}>
+                {roundField}
+              </div>
+            ))}
           </div>
           <div>
             <div className={clickImage == 0 ? "Round_text On " : "Round_text"}>

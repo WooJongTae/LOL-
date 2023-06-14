@@ -215,3 +215,59 @@
   right: -30px;
   top: 50%;
 }
+
+@media screen and (max-width: 437px) {
+  .Round_text2 p:nth-of-type(2) {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .Round .Round_flex .Round_video {
+    border-radius: 50%;
+    width: 270px;
+    height: 270px;
+    transition: all 2s ease;
+  }
+
+  .field {
+    top: 590px;
+  }
+
+  .field.On {
+    position: relative;
+    padding: 30px 50px;
+    top: 320px;
+    opacity: 1;
+    transition: all 2s ease;
+  }
+
+  .Round .Round_flex .Round_sub_flex.trans0 {
+    position: absolute;
+    display: flex;
+    margin-top: 80px;
+    top: 400px;
+    left: 102.5%;
+    /* 9기준으로하면 */
+    transform: translateX(-50%);
+    transition: all 2s ease;
+    z-index: 999;
+  }
+
+  .Round .Round_flex .Round_sub_flex.trans2 {
+    position: absolute;
+    display: flex;
+    margin-top: 80px;
+    top: 400px;
+    left: -1.5%;
+    /* 9기준으로하면 */
+    transform: translateX(-50%);
+    transition: all 2s ease;
+    z-index: 999;
+  }
+  .Round_text.On p:nth-of-type(2) {
+    transition: all 1s ease;
+    transform: translateY(0);
+    width: 30%;
+    margin: 0 auto;
+  }
+}

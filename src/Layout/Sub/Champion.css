@@ -296,3 +296,35 @@
 .img_screen_name p {
   font-size: 14px;
 }
+
+/* .Champion_text .Champion_div div:nth-of-type(1) {
+    box-sizing: border-box;
+    margin: 30px 20px;
+    width: 50%;
+    height: 50px;
+    background: linear-gradient(-135deg, transparent 10px, rgb(208, 168, 92) 0)
+        right,
+      linear-gradient(45deg, transparent 10px, rgb(208, 168, 92) 0) left;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+  }
+
+  .Champion_text .Champion_div div:nth-of-type(2) {
+    box-sizing: border-box;
+    margin: 0 20px;
+    width: 50%;
+    height: 50px;
+    background: linear-gradient(-135deg, transparent 10px, rgb(11, 198, 227) 0)
+        right,
+      linear-gradient(45deg, transparent 10px, rgb(11, 198, 227) 0) left;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+  } */

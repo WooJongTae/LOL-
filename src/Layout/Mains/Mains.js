@@ -8,6 +8,7 @@ import MobileBanner from "../Mobile/MobileBanner";
 function Mains() {
   const isMobile = useMediaQuery({ query: "(max-width:767px)" });
   const isDesktopOrLaptop2 = useMediaQuery({ query: "(min-width:768px)" });
+  // 가로스크롤왜지 우선 overflow
   return (
     <div>
       {isMobile && <MobileBanner />}

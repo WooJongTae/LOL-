@@ -1,4 +1,11 @@
 /* 모바일 헤더 */
+.mobile_position_header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
 
 .mobileHeader_header {
   position: fixed;
@@ -6,8 +13,8 @@
   left: 0;
   width: 100%;
   height: 100px;
-  background: red;
-  z-index: 9999;
+  background: rgb(17, 17, 17);
+  z-index: 9997;
 }
 
 .mobileHeader_header_flex {
@@ -22,12 +29,12 @@
   box-sizing: border-box;
   display: flex;
   align-items: center;
-  background: blue;
   width: 20%;
   height: 100%;
   box-sizing: border-box;
   padding-left: 20px;
   cursor: pointer;
+  fill: rgb(249, 249, 249);
 }
 
 .Header_flex_button {
@@ -35,7 +42,7 @@
 }
 
 .mobileHeader_header_flex .mobileHeader_header_image:hover {
-  fill: white;
+  fill: red;
 }
 
 /* 로고 */
@@ -43,7 +50,6 @@
 .mobileHeader_header_flex .mobileHeader_header_logo {
   display: flex;
   align-items: center;
-  background: yellow;
   width: 60%;
   height: 100%;
   padding-left: 20px;
@@ -53,7 +59,7 @@
 
 .mobileHeader_header_flex .mobileHeader_header_bar {
   display: flex;
-  background: gold;
+
   width: 20%;
   height: 100%;
 }
@@ -80,4 +86,248 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* 로고 클릭 */
+
+.header_logo_explain {
+  position: fixed;
+  width: 60%;
+  top: 0;
+  left: 0;
+  height: auto;
+  background: rgb(249, 249, 249);
+  z-index: 99999;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+.header_logo_explain_none {
+  position: fixed;
+  width: 60%;
+  top: 0;
+  left: 0;
+  height: auto;
+  background: rgb(249, 249, 249);
+  z-index: 99999;
+  transform: translateX(-100%);
+  transition: all 1s ease;
+}
+
+.mobileHeader_header_image_click {
+  padding-top: 40px;
+  padding-left: 10px;
+}
+
+.mobileHeader_header_image_click:hover {
+  cursor: pointer;
+  fill: white;
+}
+
+.mobileHeader_header_image_click_svg2 {
+  width: 10px;
+  padding-left: 5px;
+}
+
+.mobile_close_button {
+  position: absolute;
+  top: 20px;
+  right: 2%;
+  padding: 5px;
+  border-radius: 50%;
+  display: block;
+}
+
+.mobile_close_button button {
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* 클릭시베너 */
+
+.header_logo_explain_banner ul {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header_logo_explain_banner ul li {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(243, 243, 243);
+  padding: 10px 5px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_logo_explain_banner ul li svg {
+  padding: 0;
+}
+
+.header_logo_explain_banner_img {
+  margin-top: 30px;
+}
+
+.header_logo_explain_banner_img div {
+  margin: 0 auto;
+}
+
+.header_logo_explain_banner_img div:nth-of-type(2) {
+  margin-bottom: 40px;
+}
+
+.header_logo_explain_banner_img div img {
+  display: block;
+  margin: 10px auto;
+  width: 95%;
+  height: 100%;
+}
+
+.header_logo_explain_banner_img div p {
+  margin-left: 10px;
+}
+
+.touch_none {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+}
+
+/* 오른쪽 버튼 */
+
+.header_logo_right_explain {
+  position: fixed;
+  z-index: 9999;
+  background: rgb(31, 31, 31);
+  width: 60%;
+  height: auto;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: all 0.5s ease;
+}
+.header_logo_right_explain_none {
+  position: fixed;
+  z-index: 9999;
+  background: rgb(31, 31, 31);
+  width: 60%;
+  height: auto;
+  right: 0;
+  top: 0;
+  transform: translateX(0%);
+  transition: all 0.5s ease;
+}
+.header_logo_right_explain_logo {
+  margin-top: 35px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile_right_button {
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: rgb(43, 42, 41);
+  color: white;
+}
+
+.mobile_right_banner {
+  margin-top: 20px;
+}
+
+.mobile_right_banner li {
+  color: white;
+  background: rgb(31, 31, 31);
+  width: 90%;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 15px auto;
+  padding: 10px 5px;
+  fill: white;
+}
+
+.mobile_right_banner li:hover {
+  background: rgb(51, 51, 51);
+}
+
+.right_banner_svg {
+  width: 10px;
+}
+
+.mobile_right_login {
+  text-align: center;
+  display: block;
+  width: 85%;
+  height: 20px;
+  background: rgb(51, 51, 51);
+  margin: 40px auto 10px;
+  padding: 10px 20px;
+  color: white;
+}
+
+.mobile_right_join {
+  width: 85%;
+  height: 20px;
+  background: rgb(18, 184, 219);
+  margin: 10px auto 50px;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.mobile_input {
+  display: flex;
+  margin-bottom: 50px;
+}
+.mobile_input_search {
+  width: 20px;
+  padding-top: 4%;
+  margin-left: 7%;
+  z-index: 9;
+  fill: white;
+}
+
+.mobile_input_input {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  width: 90%;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding-left: 40px;
+  box-sizing: border-box;
+  background-color: rgb(43, 42, 41);
+  color: white;
+}
+.mobile_input_close_button {
+  position: absolute;
+  top: 11%;
+  right: 8%;
+  color: white;
+}
+
+@media screen and (max-width: 437px) {
+  .header_logo_explain {
+    width: 100%;
+  }
+
+  .header_logo_right_explain_none {
+    width: 100%;
+  }
+
+  .mobileHeader_header_flex .mobileHeader_header_logo {
+    width: 30%;
+  }
+  .mobileHeader_header_flex .mobileHeader_header_bar {
+    width: 50%;
+  }
 }

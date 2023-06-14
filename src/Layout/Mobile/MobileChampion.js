@@ -1,14 +1,16 @@
 import React, { useState } from "react";
+import name from "../svg/name";
 import "./MobileChampion.css";
 function MobileChampion() {
-  const ArrayImage = [
-    "https://www.leagueoflegends.com/static/assassin-d64d3ffdda15e1eed637aefe6a2c7fee.png",
-    "https://www.leagueoflegends.com/static/fighter-7a08920b696ecdb673edeeae1d3c616e.png",
-    "https://www.leagueoflegends.com/static/mage-3bfa6dfe620adafe5e539c2e470f4acc.png",
-    "https://www.leagueoflegends.com/static/marksman-b339ed8fd7e04ff2c3fca022c5d299fb.png",
-    "https://www.leagueoflegends.com/static/support-d63ae08baf517425864ddc020a5871d5.png",
-    "https://www.leagueoflegends.com/static/tank-1245abc326bd98c567ab22659719a1a3.png",
-  ];
+  const ArrayImage = name.ArrayImage;
+  // const ArrayImage = [
+  //   "https://www.leagueoflegends.com/static/assassin-d64d3ffdda15e1eed637aefe6a2c7fee.png",
+  //   "https://www.leagueoflegends.com/static/fighter-7a08920b696ecdb673edeeae1d3c616e.png",
+  //   "https://www.leagueoflegends.com/static/mage-3bfa6dfe620adafe5e539c2e470f4acc.png",
+  //   "https://www.leagueoflegends.com/static/marksman-b339ed8fd7e04ff2c3fca022c5d299fb.png",
+  //   "https://www.leagueoflegends.com/static/support-d63ae08baf517425864ddc020a5871d5.png",
+  //   "https://www.leagueoflegends.com/static/tank-1245abc326bd98c567ab22659719a1a3.png",
+  // ];
 
   const ChampionName = [
     "아칼리",
@@ -27,13 +29,14 @@ function MobileChampion() {
     "지옥의 간수",
     "여명의 빛",
   ];
+
   const [number, setNumber] = useState(0);
 
   const imageChange = (num) => {
     setNumber(num);
   };
   return (
-    <div className="Champion">
+    <div className="MobileChampion">
       <div className="inner">
         <div className="Champion_container">
           <div className="Champion_text">
@@ -52,10 +55,23 @@ function MobileChampion() {
               </div>
             </div>
           </div>
-          <div className="Champion_img">
-            <div className="Champion_ul">
+          <div className="Mobile_Champion_img">
+            <div className="Mobile_Champion_ul">
               <ul>
-                <li onClick={() => imageChange(0)}>
+                {ChampionName.map((name, i) => (
+                  <li onClick={() => imageChange(i)}>
+                    <span
+                      className={
+                        number === i
+                          ? "mobile_champion_name_on"
+                          : "mobile_champion_name"
+                      }
+                    >
+                      {name}
+                    </span>
+                  </li>
+                ))}
+                {/* <li onClick={() => imageChange(0)}>
                   <span>암살자</span>
                 </li>
                 <li onClick={() => imageChange(1)}>
@@ -77,17 +93,21 @@ function MobileChampion() {
                 <li onClick={() => imageChange(5)}>
                   <span>탱커</span>
                   <div className={5 === number ? "circle On" : "circle"}></div>
-                </li>
+                </li> */}
               </ul>
             </div>
-            <img className="img_screen" src={ArrayImage[number]} alt="imgs" />
-            <div className="img_circle"></div>
+            <img
+              className="Mobile_img_screen"
+              src={ArrayImage[number]}
+              alt="imgs"
+            />
+            <div className="Mobile_img_circle"></div>
           </div>
           <div className="img_screen_name">
             {/* 여기 하드코딩 const로 배열만들어서넣기 이미지도 */}
-            <h1>{ChampionName[number]}</h1>
+            <h1 className="MobileChampionName">{ChampionName[number]}</h1>
             <br />
-            <p>{ChampionEx[number]}</p>
+            <p className="MobileChampionNameEx">{ChampionEx[number]}</p>
           </div>
         </div>
       </div>

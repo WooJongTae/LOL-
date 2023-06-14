@@ -128,3 +128,28 @@
     transform: translateX(-40px);
   }
 }
+
+@media screen and (max-width: 767px) {
+  .Field #Field2 .text {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@media screen and (max-width: 437px) {
+  .Field #Field2 .text p:nth-of-type(3) {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .Field #Field2 .box_area {
+    height: 100px;
+    display: flex;
+    margin: 30px auto 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Field #Field2 .div_box:nth-of-type(1) {
+    background: rgb(208, 168, 92);
+    margin-bottom: 20px;
+  }
+}

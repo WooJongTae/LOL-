@@ -1,27 +1,34 @@
 import React from "react";
 import "./Footer.css";
+import name from "../svg/name";
 
 function Footer() {
+  const { services, footerExplains, footerLogo, footerSvgs } = name;
+
   return (
     <div className="Footer">
       <div className="Footer_service">
         <ul>
-          <li>
-            <a href="#">고객지원</a>
-          </li>
-          <li>
-            <a href="#">학부모 전용 고객 센터</a>
-          </li>
-          <li>
-            <a href="#">PC방</a>
-          </li>
-          <li>
-            <a href="#">라이엇 모바일 컴패니언 앱 다운로드</a>
-          </li>
+          {services.map((service) => (
+            <li>
+              <a href="#">{service}</a>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="Footer_icon">
         <ul>
+          {footerSvgs.map((footerSvg) => (
+            <li>
+              <a href="#">
+                <svg
+                  className=""
+                  viewBox="0 0 16.67 11.67"
+                  dangerouslySetInnerHTML={{ __html: footerSvg }}
+                />
+              </a>
+            </li>
+          ))}
           <li>
             <a href="#">
               <svg class="" viewBox="0 0 16.67 11.67">
@@ -103,37 +110,17 @@ function Footer() {
       </div>
       <div className="Footer_explain2">
         <ul>
-          <li>
-            <a href="#">서비스 약관</a>
-          </li>
-          <li>
-            <a href="#">개인정보 처리방침</a>
-          </li>
-          <li>
-            <a href="#">서비스 상태</a>
-          </li>
-          <li>
-            <a href="#">게임시간 선택제</a>
-          </li>
-          <li>
-            <a href="#">사회공헌</a>
-          </li>
-          <li>
-            <a href="#">사업자정보확인</a>
-          </li>
-          <li>
-            <a href="#">쿠키 설정</a>
-          </li>
+          {footerExplains.map((footerExplain) => (
+            <li>
+              <a href="#">{footerExplain}</a>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="Footer_img">
         <div>
           <a href="#">
-            <img
-              src="https://images.contentstack.io/v3/assets/blt0eb2a2986b796d29/blt347042469caad5ee/5e8639455bca9a639e7dd8c1/kr-rating.png?&amp;height=100&amp;disable=upscale"
-              alt="Game Rating"
-              title="Game Rating"
-            />
+            <img src={footerLogo} alt="Game Rating" title="Game Rating" />
           </a>
         </div>
       </div>

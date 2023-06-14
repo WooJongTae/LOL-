@@ -119,7 +119,35 @@
 }
 
 .Footer div img {
+  display: block;
+  width: 600px;
   padding: 10px 20px;
+  margin: 0 auto;
   border-radius: 20px;
   background-color: gray;
+}
+
+@media screen and (max-width: 767px) {
+  .Footer {
+    height: auto;
+  }
+
+  .Footer .Footer_service {
+    height: 100%;
+  }
+
+  .Footer .Footer_service ul {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Footer .Footer_explain2 ul {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+  .Footer div img {
+    width: 90%;
+  }
 }

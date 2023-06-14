@@ -1,11 +1,12 @@
 import React from "react";
-import MobileChampion from "../Mobile/MobileChampion";
-import MobileChampion2 from "../Mobile/MobileChampion2";
+
+import Champion2 from "../Sub/Champion2";
+import Champion from "../Sub/Champion";
 function Sub() {
   return (
     <div>
-      <MobileChampion />
-      <MobileChampion2 />
+      <Champion />
+      <Champion2 />
     </div>
   );
 }

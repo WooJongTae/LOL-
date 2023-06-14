@@ -1,6 +1,28 @@
 import React, { useState } from "react";
 import "./Header.css";
+import name from "./svg/name";
 function Header() {
+  const headerNameLists = [
+    [
+      "리그 오브 레전드",
+      "발로란트",
+      "전략적 팀 전투",
+      "레전드 오브 룬테라",
+      "리그 오브 레전드:와이들 리프트",
+    ],
+    [
+      "시간/교차",
+      "마법공학 아수라장",
+      "마력 척결관",
+      "몰락한 왕",
+      "누누의 노래",
+      "RIOT FORGE의 게임",
+    ],
+    ["리그 오브 레전드 e스포츠", "발로란트 e스포츠"],
+    ["엔터테인먼트", "아케인", "유니버스", "라이엇 게임즈 뮤직"],
+    ["라이엇 게임즈", "라이엇 스토어", "라이엇 모바일", "라이엇 고객지원"],
+  ];
+  const svg1 = name.svg1;
   const [logo, setLogo] = useState(false);
   const [onSearch, setOnSearch] = useState(false);
   const [isHovered, setIsHovered] = useState(0);
@@ -63,90 +85,54 @@ function Header() {
             <div>
               <p>게임</p>
               <ul>
-                <li>
-                  <a href="#">리그 오브 레전드</a>
-                </li>
-                <li>
-                  <a href="#">발로란트</a>
-                </li>
-                <li>
-                  <a href="#">전략적 팀 전투</a>
-                </li>
-                <li>
-                  <a href="#">레전드 오브 룬테라</a>
-                </li>
-                <li>
-                  <a href="#">리그 오브 레전드:와이들 리프트</a>
-                </li>
+                {headerNameLists[0].map((headerNameList) => (
+                  <li>
+                    <a href="#">{headerNameList}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div>
               <div>
                 <p>RIOT FORGE</p>
                 <ul>
-                  <li>
-                    <a href="#">시간/교차</a>
-                  </li>
-                  <li>
-                    <a href="#">마법공학 아수라장</a>
-                  </li>
-                  <li>
-                    <a href="#">마력 척결관</a>
-                  </li>
-                  <li>
-                    <a href="#">몰락한 왕</a>
-                  </li>
-                  <li>
-                    <a href="#">누누의 노래</a>
-                  </li>
-                  <li>
-                    <a href="#">RIOT FORGE의 게임</a>
-                  </li>
+                  {headerNameLists[1].map((headerNameList) => (
+                    <li>
+                      <a href="#">{headerNameList}</a>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div>
                 <p>E스포츠</p>
                 <ul>
-                  <li>
-                    <a href="#">리그 오브 레전드 e스포츠</a>
-                  </li>
-                  <li>
-                    <a href="#">발로란트 e스포츠</a>
-                  </li>
+                  {headerNameLists[2].map((headerNameList) => (
+                    <li>
+                      <a href="#">{headerNameList}</a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
-
             <div>
               <div>
                 <p>엔터테인먼트</p>
                 <ul>
-                  <li>
-                    <a href="#">아케인</a>
-                  </li>
-                  <li>
-                    <a href="#">유니버스</a>
-                  </li>
-                  <li>
-                    <a href="#">라이엇 게임즈 뮤직</a>
-                  </li>
+                  {headerNameLists[3].map((headerNameList) => (
+                    <li>
+                      <a href="#">{headerNameList}</a>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div>
                 <p>기타</p>
                 <ul>
-                  <li>
-                    <a href="#">라이엇 게임즈</a>
-                  </li>
-                  <li>
-                    <a href="#">라이엇 스토어</a>
-                  </li>
-                  <li>
-                    <a href="#">라이엇 모바일</a>
-                  </li>
-                  <li>
-                    <a href="#">라이엇 고객지원</a>
-                  </li>
+                  {headerNameLists[4].map((headerNameList) => (
+                    <li>
+                      <a href="#">{headerNameList}</a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
